@@ -17,13 +17,14 @@
 				margin: auto;
 		}
 
-		#barraProcurarInicial{
-			height: 50px;
-			font-size: 35px;
+		#barraProcurarNav{
+			height: 35px;
+			font-size: 20px;
+			width: 400px
 		}
 
-		#btnProcurarInicial{
-			margin-left: -130px;
+		#btnProcurarNav{
+			margin-left: 10px;
 		}
 
 		#btnCadastreseInicial{
@@ -35,7 +36,9 @@
 		}
 
 		.navBarPrincipal{
-			background-color: #fff!important;	
+			background-color: #fff!important;
+			padding-left: 10%;
+    		padding-right: 10%;	
 		}
 
 		.jumbPrincipal {
@@ -45,33 +48,25 @@
 		.textJumbPrincipal{
 			color: #fff;
 		}
+		.logo{
+			width: 20%;
+		}
 	</style>
 	<body>
 	<div id="app" class='row center'>
 		<nav class="navbar navbar-light bg-light justify-content-between  col col-sm-12 navBarPrincipal">
-			<a class="navbar-brand">
-				<img src="img/logo_hospitaliza.png" width="15%" style='float:left;'>
+			<a class="navbar-brand logo">
+				<img src="img/logo_hospitaliza.png" width="50%" style='float:left;'>
 			</a>
+			<span class="form-inline">			
+				<input id="barraProcurarNav" type="text" class='form-control'>				
+				<button class='btn btn-primary btn-sm' id="btnProcurarNav"> Procurar </button>			
+			</span>
 			<span class="form-inline">
 				<button class="btn btn-outline-secondary" type="button" id="btnCadastreseInicial" data-toggle='modal' data-target="#modalCadastre">Cadastre-se</button>	
 				<button class="btn btn-outline-success my-2 my-sm-0" data-toggle='modal' data-target="#modalLogin">Entrar</button>
 			</span>
-		</nav>
-		<div class="jumbotron col col-sm-12 jumbPrincipal" >
-			<h3 class="display-4 textJumbPrincipal">Digite o nome do hospital</h3>
-			<div class='row'>
-				<div class='col col-sm-3'>
-				</div>
-				<div class='col col-sm-5'>
-					<input id="barraProcurarInicial" type="text" class='form-control'>
-				</div>
-				<div class='col col-sm-2'>
-					<button class='btn btn-primary btn-lg' id="btnProcurarInicial"> Procurar </button>
-				</div>
-				<div class='col col-sm-2'>
-				</div>
-			</div>
-		</div>
+		</nav>		
 	</div>
 
 	<!-- Modal cadastre-se -->
@@ -162,7 +157,7 @@
 			el: '#app',
 			data: {
 				message: 'Its a Blank Page by VeuJS'
-				
+
 			}
 		})
 </script>
