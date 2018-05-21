@@ -1,5 +1,5 @@
 
-hospitaliza.controller('usuarioController', function($scope,usuarioService) {
+hospitaliza.controller('usuarioController', function($scope,usuarioService,$rootScope,loginService) {
 
   var carregarDadosUsuario = function (){
 		estagiarioService.getDadosUsuario().then(function (response){ 
@@ -13,6 +13,8 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService) {
             response=>{ 
              // close modal             
              $scope.msgNotification('Usuário Cadastrado com sucesso.') 
+             // efetuar login
+                
             },
             error=>{
               $scope.msgError(error)

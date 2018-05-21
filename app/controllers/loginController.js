@@ -15,5 +15,6 @@ hospitaliza.controller('loginController', function($location,AuthenticationServi
    var init = function(){
         AuthenticationService.setCredentials();
     }
+   
 
 });
