@@ -201,29 +201,31 @@
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-10'>
 							<label>Nome Completo:</label>
-							<input type='text' ng-model='newUser.nome' class='form-control'>
-							{{newUser.nome}}
+							<input type='text' ng-model='newUser.nome' class='form-control'>							
 						</div>
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-10'>
 							<label>E-mail:</label>
-							<input type='text' ng-model='newUser.email' class='form-control'>
-							{{newUser.email}}
+							<input type='text' ng-model='newUser.email' class='form-control'>							
 						</div>
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-5'>
 							<label>Senha:</label>
-							<input type='password' ng-model='newUser.senha' class='form-control'>
-							{{newUser.senha}}
+							<input type='password' ng-model='newUser.senha' class='form-control'>							
 						</div>						
 						<div class='col col-sm-5'>
 							<label>Confirme a senha:</label>
 							<input type='password' ng-model='newUser.senhaConf' class='form-control'>
 						</div>
-						<div class='col col-sm-1'></div>						
-					</div>         
+						<div class='col col-sm-1'></div>	
+					</div>
+                    <div class='row'>
+					    <div class='col col-sm-12' style='text-align:center;'>
+						    <font ng-bind='msgCadastro' style='color:red;font-size:15px;'></font>
+				        </div>	
+                    </div>
 				</div>
 				<div class="modal-footer">
 					<center>
