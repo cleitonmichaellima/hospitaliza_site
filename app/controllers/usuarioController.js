@@ -1,32 +1,20 @@
-
-hospitaliza.controller('usuarioController', function($scope,usuarioService,$rootScope,loginService) {
+hospitaliza.controller('usuarioController', function($scope,usuarioService) {
 
   var carregarDadosUsuario = function (){
 		estagiarioService.getDadosUsuario().then(function (response){ 
 		});
 	}
 
-  
   $scope.inserirUsuario = function(){
       // verificar se email ja nao esta cadastrado
-      usuarioService.getInsereUsuario($scope.newUser).then( 
-            response=>{ 
-             // close modal             
-             $scope.msgNotification('Usuário Cadastrado com sucesso.') 
-             // efetuar login
-                
-            },
-            error=>{
-              $scope.msgError(error)
-            }
-            ).finally(
-             init();
-            )
-       }
-
-	 }
+      usuarioService.getInsereUsuario($scope.newUser).then(function (response){       			
+		
+		});        
+  
+  }
+	 
                        
-  var init (){
+  var init = function  (){
       $scope.newUser = {
                         nome: '',
                         email: '',
@@ -34,7 +22,7 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$root
                         }
       
                         
-  }
+        }
     
  init()
 });

@@ -1,6 +1,6 @@
 hospitaliza.factory('usuarioService', function($http) {
     
-    var url = "http://cleitonlima.com.br/slim/usuario/"
+    var url = "http://cleitonlima.com.br/slim/usuario.php/usuario/"
     
     var _getDadosUsuario = function (){
 
@@ -16,8 +16,11 @@ hospitaliza.factory('usuarioService', function($http) {
         return request = $http({
                                 method: "post",
                                 url: url,
-                                data: { newUser:newUser },
-                                headers: { 'Content-Type': 'application/json' }
+                                data: { nome:newUser.nome,
+                                        email:newUser.email,
+                                        senha:newUser.senha
+                                      }
+                               
                             });
     }
 
