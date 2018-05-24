@@ -83,3 +83,56 @@
 			</div>
 		</div>
 	</div>
+	
+    <!-- Modal cadastre-se -->
+	<div class="modal fade" id="modalLogin"   ng-controller="loginController" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Registrar Avaliação</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class='row'>
+						<div class='col col-sm-1'></div>
+						<div class='col col-sm-10'>
+							<label>Titulo Avaliação</label>
+							<input type='text'  ng-model='avaliacao.titulo' class='form-control'>
+						</div>
+						<div class='col col-sm-1'></div>
+						<div class='col col-sm-1'></div>
+						<div class='col col-sm-10'>
+							<label>Descrição:</label>
+							<textarea ng-model="avaliacao.descricao"></textarea>
+						</div>
+						<div class='col col-sm-1'></div>	
+						<div class='col col-sm-1'></div>
+						<div class=' row col col-sm-10'>
+							<label>Nota</label>							
+							<input type="radio" ng-model="avaliacao.nota" ng-true-value='1'> 1 (Muito Ruim) <br>
+							<input type="radio" ng-model="avaliacao.nota" ng-true-value='2'> 2 (Ruim) <br>
+							<input type="radio" ng-model="avaliacao.nota" ng-true-value='3'> 3 (Regular) <br>
+							<input type="radio" ng-model="avaliacao.nota" ng-true-value='4'> 4 (Bom) <br>
+							<input type="radio" ng-model="avaliacao.nota" ng-true-value='5'> 5 (Muito Bom) <br>							 
+						</div>
+						<div class='col col-sm-1'></div>
+						<div class='col col-sm-1'></div>
+						<div class=' row col col-sm-10'>
+							<label>Indicaria esta instituição para recorrer ao atendimento ?</label>							
+							<input type="radio" ng-model="avaliacao.indicacao" ng-true-value='1'> Sim
+							<input type="radio" ng-model="avaliacao.indicacao" ng-true-value='0'> Não													 
+						</div>
+						<div class='col col-sm-1'></div>							
+					</div>         
+				</div>
+				<div class="modal-footer">
+					<center>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-success"  ng-click="logar()">Entrar</button>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
