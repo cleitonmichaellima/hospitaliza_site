@@ -1,0 +1,71 @@
+        .center {
+            text-align: center;
+            margin: auto;
+		}
+
+		#barraProcurarInicial{
+			height: 50px;
+			font-size: 35px;
+		}
+
+		#btnProcurarInicial{
+			margin-left: -130px;
+		}
+
+		#btnCadastreseInicial{
+			margin-right: 20px;
+		}
+
+		body{
+			font-family: 'Oswald', sans-serif;
+		}
+
+		.navBarPrincipal{
+			background-color: #fff!important;	
+		}
+
+		.jumbPrincipal {
+			background-color: #1999a7;
+            background: url("http://getwallpapers.com/wallpaper/full/6/0/5/174855.jpg");
+            height: 500px;
+		}
+
+		.textJumbPrincipal{
+			color: #fff;
+            margin-top:100px;
+		}
+        .checkedStar {
+            color: lightblue;
+        }
+        
+        .cardRanking{
+            border-radius: 3px;
+            box-shadow: 3px 2px 3px rgba(0,0,0,0.1);
+        }
+        
+        li{
+            text-align: left;
+            list-style: none;
+            font-weight: lighter;
+        }       
+
+		#barraProcurarNav{
+			height: 35px;
+			font-size: 20px;
+			width: 400px
+		}
+
+		#btnProcurarNav{
+			margin-left: 10px;
+		}
+
+		.navBarPrincipal{
+			background-color: #fff!important;
+			padding-left: 10%;
+    		padding-right: 10%;	
+		}
+		
+		.logo{
+			width: 20%;
+		}
+	</style>

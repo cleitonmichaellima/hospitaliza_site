@@ -1,29 +1,14 @@
-hospitaliza.factory('loginService', function($http, $cookies,$rootScope, UserService) {
+hospitaliza.factory('loginService', function($http) {
 
-    var _login = function (username, password, callback) {
- 
-            /*
-            $timeout(function () {
-                var response;
-                UserService.GetByUsername(username)
-                    .then(function (user) {
-                        if (user !== null && user.password === password) {
-                            response = { success: true };
-                        } else {
-                            response = { success: false, message: 'Username or password is incorrect' };
-                        }
-                        callback(response);
-                    });
-            }, 1000);*/
+    var _login = function (login) {           
             
             return request = $http({
-                                        method: "post",
-                                        url: url,
-                                        data: { 
-                                                email: login.email,
-                                                senha: login.senha
-                                              },
-                                        headers: { 'Content-Type': 'application/json' }
+                                    method: "get",
+                                    url: "http://cleitonlima.com.br/slim/usuario.php/login/",
+                                    params: {
+                                        login: login
+                                    },
+                                    headers: { 'Content-Type': 'application/json' }
                                     });
  
         }

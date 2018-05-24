@@ -1,7 +1,7 @@
-hospitaliza.controller('loginController', function($location,AuthenticationService,$scope,usuarioService) {
+hospitaliza.controller('loginController', function($location,loginService,$scope,usuarioService) {
 
-   var logar = function (){
-                            AuthenticationService.Login($scope.login.email,$scope.login.senha, function (response) {
+   $scope.logar = function (){
+                            loginService.login($scope.login, function (response) {
                                 if (response.success) {
                                     AuthenticationService.SetCredentials(vm.username, vm.password);
                                     $location.path('/');
