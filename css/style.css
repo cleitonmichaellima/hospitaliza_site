@@ -50,13 +50,14 @@
         }       
 
 		#barraProcurarNav{
-			height: 35px;
+			height: 40px;
 			font-size: 20px;
-			width: 400px
+			width: 500px
 		}
 
 		#btnProcurarNav{
 			margin-left: 10px;
+            height: 40px;
 		}
 
 		.navBarPrincipal{
@@ -68,4 +69,8 @@
 		.logo{
 			width: 20%;
 		}
+        .row{
+            margin-right:0px;
+            margin-left: 0px;
+        }
 	</style>
