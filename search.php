@@ -1,32 +1,3 @@
-<html>	
-	<head>
-		<title>Hospitaliza</title>
-		<meta charset="utf-8">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/style.css">
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		
-		<!-- Angular Js -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
-        <script src="app/app.js"></script>  
-        
-        <!-- services -->
-        <script src="app/services/usuarioService.js"></script>
-        <script src="app/services/loginService.js"></script>
-        
-        <!-- controllers-->
-        <script src="app/controllers/usuarioController.js"></script>
-        <script src="app/controllers/loginController.js"></script>
-
-	</head>
-
-	<body id="Hospitaliza">
 	<div class="row col-sm-12" style="background: #3b3636;height: 30px;"></div>
 	<div  class='row center cardRanking'>
 		<nav class="navbar navbar-light bg-light justify-content-between  col col-sm-12 navBarPrincipal">
@@ -88,7 +59,7 @@
                </div>
 	       </div>
 	    </div>
-	    <div class='col-sm-2 card' style='padding: 50px;'>
+	    <div class='col-sm-2 card' style='padding: 50px !important;padding:20px;'>
 	      <h4> Melhores Avaliadas</h4>
 	      <div>
             <span class="fa fa-star checkedStar"></span>
@@ -108,9 +79,4 @@
 	      <h5>Hospital Santo Antonio</h5>      
 	    </div>
 	    <div class='col-sm-2'></div>
-	</div>
-	<?php
-          require "modal.php";   
-    ?>
-</body>
-</html>
+	</div>        
