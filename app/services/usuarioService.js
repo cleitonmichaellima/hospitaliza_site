@@ -2,14 +2,9 @@ hospitaliza.factory('usuarioService', function($http) {
     
     var url = "http://cleitonlima.com.br/slim/usuario.php/usuario/"
     
-    var _getDadosUsuario = function (){
+    var _getDadosUsuario = function (id){
 
-        return request = $http({
-                                method: "get",
-                                url: url,
-                                data: { id_usuario: user.id },
-                                headers: { 'Content-Type': 'application/json' }
-                          });
+        return request = $http.get('http://cleitonlima.com.br/slim/usuario.php/usuario/'+id);
     }
 
     var _getInsereUsuario = function(newUser){
@@ -23,9 +18,21 @@ hospitaliza.factory('usuarioService', function($http) {
                                
                             });
     }
+    
+    var _getAtualizarDadosUsuario = function(user){
+        return request = $http({
+                                method: "post",
+                                url: url,
+                                data: { 
+                                        nome:user.nome,
+                                        id_usuario: user.id_usuario
+                                      }                              
+                            });
+    }
 
     return {
         getInsereUsuario : _getInsereUsuario,
-        getDadosUsuario : _getDadosUsuario
+        getDadosUsuario : _getDadosUsuario,
+        getAtualizarDadosUsuario : _getAtualizarDadosUsuario
     }
 });

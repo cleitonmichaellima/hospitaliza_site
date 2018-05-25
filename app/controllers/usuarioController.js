@@ -1,7 +1,10 @@
-hospitaliza.controller('usuarioController', function($scope,usuarioService) {
-
-  var carregarDadosUsuario = function (){
-		estagiarioService.getDadosUsuario().then(function (response){ 
+hospitaliza.controller('usuarioController', function($scope,usuarioService,$routeParams) {
+  
+  var carregarDadosUsuario = function (){       
+		usuarioService.getDadosUsuario($routeParams.id_usuario).then(function (response){ 
+            $scope.user.nome = response.data.nome;
+            $scope.user.id_usuario = $routeParams.id_usuario
+            
 		});
 	}
 
@@ -21,6 +24,13 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService) {
              
   
   }
+  
+  $scope.atualizarDados = function (){
+      
+      usuarioService.getAtualizarDadosUsuario($scope.user).then(function (response){ 
+            
+      })
+  }
 	 
                        
   var init = function  (){
@@ -29,7 +39,14 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService) {
                             email: '',
                             senha: ''
                             }
-          $scope.msgCadastro = '';
+         $scope.user = {
+                        nome: '',
+                        id_usario: ''                            
+                        }
+      
+      
+          $scope.msgCadastro = ''
+          carregarDadosUsuario();
                         
        }
     
