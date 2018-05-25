@@ -85,7 +85,7 @@
 	</div>
 	
     <!-- Modal cadastre-se -->
-	<div class="modal fade" id="modalAvaliar"   ng-controller="loginController" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="modalAvaliar"   ng-controller="avaliacaoController" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -99,24 +99,24 @@
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-10'>
 							<label>Titulo Avaliação</label>
-							<input type='text'  ng-model='avaliacao.titulo' class='form-control'>
+							<input type='text'  ng-model='novaAvaliacao.titulo' class='form-control'>
 						</div>
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-10'>
 							<label>Descrição:</label>
-							<textarea class="form-control" ng-model="avaliacao.descricao"></textarea>
+							<textarea class="form-control" ng-model="novaAvaliacao.descricao"></textarea>
 						</div>
 						<div class='col col-sm-1'></div>	
 						<div class='col col-sm-1'></div>
 						<div class=' row col col-sm-10'>
                             <label>Nota:</label><br>
                             <div class='col-sm-12'>
-                                <li><input type="radio" name="nota" ng-model="avaliacao.nota" ng-true-value='1'> 1 (Muito Ruim)</li>
-                                <li><input type="radio" name="nota" ng-model="avaliacao.nota" ng-true-value='2'> 2 (Ruim)</li>
-                                <li><input type="radio" name="nota" ng-model="avaliacao.nota" ng-true-value='3'> 3 (Regular)</li>
-                                <li><input type="radio" name="nota" ng-model="avaliacao.nota" ng-true-value='4'> 4 (Bom)</li> 
-                                <li><input type="radio" name="nota" ng-model="avaliacao.nota" ng-true-value='5'> 5 (Muito Bom)</li>
+                                <li><input type="radio" name="nota" ng-model="novaAvaliacao.nota" ng-true-value='1'> 1 (Muito Ruim)</li>
+                                <li><input type="radio" name="nota" ng-model="novaAvaliacao.nota" ng-true-value='2'> 2 (Ruim)</li>
+                                <li><input type="radio" name="nota" ng-model="novaAvaliacao.nota" ng-true-value='3'> 3 (Regular)</li>
+                                <li><input type="radio" name="nota" ng-model="novaAvaliacao.nota" ng-true-value='4'> 4 (Bom)</li> 
+                                <li><input type="radio" name="nota" ng-model="novaAvaliacao.nota" ng-true-value='5'> 5 (Muito Bom)</li>
                             </div>												 
 						</div>
 						<div class='col col-sm-1'></div>
@@ -124,8 +124,8 @@
 						<div class=' row col col-sm-10'>
 							<label>Indicaria esta instituição para recorrer ao atendimento ?</label>	
 							<div class='col-sm-12'>						
-                                <input name="indicacao" type="radio" ng-model="avaliacao.indicacao" ng-true-value='1'> Sim
-                                <input name="indicacao" type="radio" ng-model="avaliacao.indicacao" ng-true-value='0'> Não
+                                <input name="indicacao" type="radio" ng-model="novaAvaliacao.indicacao" ng-true-value='1'> Sim
+                                <input name="indicacao" type="radio" ng-model="novaAvaliacao.indicacao" ng-true-value='0'> Não
                             </div>				 
 						</div>
 						<div class='col col-sm-1'></div>							
@@ -134,7 +134,7 @@
 				<div class="modal-footer">
 					<center>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-success"  ng-click="logar()">Entrar</button>
+						<button type="button" class="btn btn-success"  ng-click="inserirAvaliacao()">Registrar Avaliação</button>
 					</center>
 				</div>
 			</div>

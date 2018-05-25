@@ -19,6 +19,8 @@
         <!-- services -->
         <script src="app/services/usuarioService.js"></script>
         <script src="app/services/loginService.js"></script>
+        <script src="app/services/avaliacaoService.js"></script>
+        
         
         <!-- controllers-->
         <script src="app/controllers/usuarioController.js"></script>
