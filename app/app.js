@@ -5,12 +5,12 @@ hospitaliza.config(function($routeProvider) {
     .when("/", {
         templateUrl : "../main.php"
     })
-    .when("/avaliacao", {
+    .when("/avaliacao/:id_avaliacao", {
         templateUrl : "../avaliacao.php"
     })
-    .when("/instituicao", {
+    .when("/instituicao/:id_instituicao", {
         templateUrl : "../instituicao.php",
-        controller: "avaliacaoController"
+        controller: "instituicaoController"
     })
     .when("/search", {
         templateUrl : "../search.php"
@@ -19,4 +19,4 @@ hospitaliza.config(function($routeProvider) {
         templateUrl : "../cadastro.php",
         controller: "usuarioController"
     });
-});
+}); 

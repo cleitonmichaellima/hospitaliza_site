@@ -16,10 +16,17 @@ hospitaliza.factory('avaliacaoService', function($http) {
                                
                             });
     }
+    
+     var _getDadosAvaliacao = function (id){
+
+        return request = $http.get(url+id);
+    }
+     
    
 
     return {
-        getInsereAvaliacao : _getInsereAvaliacao
+        getInsereAvaliacao : _getInsereAvaliacao,
+        getDadosAvaliacao : _getDadosAvaliacao
         
     }
 });

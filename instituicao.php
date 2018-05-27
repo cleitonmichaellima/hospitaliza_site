@@ -14,12 +14,12 @@
 			</span>
 		</nav>		
 	</div>
-	<div class='row'>
+	<div class='row' ng-controller='instituicaoController'>
 	    <div class='col-sm-2'></div>
         <div class='col-sm-8' style='margin-top: 50px;'> <!-- caixa com as informações da instituicao-->
             <div class='cardRanking' style='padding: 20px;'>
                 <div class='col-sm-12'>
-                    <h2> Hospital Santa Casa</h2>
+                    <h2> {{instituicao.nome}}</h2>
                 </div>
                 <div class='row col-sm-12'>
                     <div class='col-sm-8'>
@@ -74,22 +74,12 @@
                 <h4> Avaliações de Usuários</h4>
             </div>
             <div class='row col-sm-12'>
-               <div class='col-sm-1'>                
-               </div>
-               <div class='col-sm-10 card cardRanking' style='padding: 20px;'>   
-                   <h5> Ótima instituição</h5>   
-                   Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impresso          
-               </div>
-               <div class='col-sm-1'>                
-               </div>
-               <div class='col-sm-1'>                
-               </div>
-               <div class='col-sm-10 card cardRanking' style='padding: 20px;margin-top:5px;'>   
-                   <h5> Péssima instituição</h5>   
-                   Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impresso          
-               </div>
-               <div class='col-sm-1'>                
-               </div>
+               <div class="row col-sm-12" ng-repeat="avaliacao in avaliacoesInstituicao">
+                   <div class='col-sm-10 card cardRanking' style='padding: 20px;margin-bottom: 5px;'>   
+                       <a href='#!/avaliacao/{{avaliacao.id_avaliacao}}'><h5>{{avaliacao.titulo}}</h5></a>  
+                       {{avaliacao.descricao}}   
+                   </div>                 
+              </div>             
             </div>           
         </div>
          <div class='col-sm-2'></div>         

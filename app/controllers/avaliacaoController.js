@@ -7,7 +7,16 @@ hospitaliza.controller('avaliacaoController', function($scope,avaliacaoService,$
 		}); 
   }             
   
-                       
+ var carregarDadosAvaliacao = function (){       
+		avaliacaoService.getDadosAvaliacao($routeParams.id_avaliacao).then(function (response){ 
+            
+            $scope.avaliacao.titulo = response.data.titulo;
+            $scope.avaliacao.descricao = response.data.descricao; 
+            $scope.avaliacao.id_instituicao = response.data.id_instituicao; 
+            
+		});
+ }
+ 
   var init = function  (){
           $scope.novaAvaliacao = {
                                     id_usuario:109,
@@ -17,6 +26,13 @@ hospitaliza.controller('avaliacaoController', function($scope,avaliacaoService,$
                                     nota : '',
                                     indicacao: ''                                    
                                 }
+          $scope.avaliacao = {                                    
+                                    titulo:'',
+                                    descricao : '',
+                                    nota : '',
+                                    indicacao: ''                                    
+                                }
+      carregarDadosAvaliacao()
   }
          
     

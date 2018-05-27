@@ -20,12 +20,15 @@
         <script src="app/services/usuarioService.js"></script>
         <script src="app/services/loginService.js"></script>
         <script src="app/services/avaliacaoService.js"></script>
+        <script src="app/services/instituicaoService.js"></script>
         
         
         <!-- controllers-->
         <script src="app/controllers/usuarioController.js"></script>
         <script src="app/controllers/loginController.js"></script>
         <script src="app/controllers/avaliacaoController.js"></script>
+        <script src="app/controllers/instituicaoController.js"></script>
+
     </head>
 
 	<body ng-app="Hospitaliza">

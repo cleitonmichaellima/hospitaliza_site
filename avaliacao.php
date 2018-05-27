@@ -14,11 +14,11 @@
 			</span>
 		</nav>		
 	</div>
-	<div class='row'>
+	<div class='row' ng-controller="avaliacaoController">
 	    <div class='col-sm-2'></div>
 	    <div class='row col-sm-6 cardRanking' style='margin-top:50px'>
             <div class='col-sm-12'>
-                <h2>Òtima instituição</h2>
+                <h2>{{avaliacao.titulo}}</h2>
             </div>
             <div class='col-sm-3'>
                 <p style="margin-bottom: -20px;">Nota</p>
@@ -29,7 +29,7 @@
             </div>   
 	    </div>
 	    <div class='col-sm-2 card' style='padding-top: 50px !important;padding:30px;'>
-	      <h4> Hospital Santa Casa</h4>
+	       <a href='#!/instituicao/{{avaliacao.id_instituicao}}'><h5> Hospital Santa Casa</h5></a>
 	        <div>
                <h6>Avaliações Positivas</h6>
                <div class="progress">

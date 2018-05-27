@@ -134,7 +134,7 @@
 				<div class="modal-footer">
 					<center>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-success"  ng-click="inserirAvaliacao()">Registrar Avaliação</button>
+						<button type="button" class="btn btn-success"  ng-class="{ 'disabled': !novaAvaliacao.titulo || !novaAvaliacao.descricao || !novaAvaliacao.nota || !novaAvaliacao.indicacao }" ng-click="inserirAvaliacao()">Registrar Avaliação</button>
 					</center>
 				</div>
 			</div>
