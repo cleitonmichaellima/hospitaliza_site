@@ -1,8 +1,6 @@
 hospitaliza.factory('avaliacaoService', function($http) {
     
-    var url = "http://cleitonlima.com.br/slim/avaliacao.php/avaliacao/"
-    
-  
+    var url = "http://cleitonlima.com.br/slim/contribuicao.php/avaliacao/"
 
     var _getInsereAvaliacao = function(novaAvaliacao){
         return request = $http({
@@ -12,7 +10,8 @@ hospitaliza.factory('avaliacaoService', function($http) {
                                         titulo:novaAvaliacao.titulo,
                                         id_usuario:novaAvaliacao.id_usuario,
                                         id_instituicao:novaAvaliacao.id_instituicao,
-                                        descricao:novaAvaliacao.descricao
+                                        descricao:novaAvaliacao.descricao,
+                                        indicacao:novaAvaliacao.indicacao
                                       }
                                
                             });
@@ -20,7 +19,7 @@ hospitaliza.factory('avaliacaoService', function($http) {
    
 
     return {
-        _getInsereAvaliacao : _getInsereAvaliacao
+        getInsereAvaliacao : _getInsereAvaliacao
         
     }
 });

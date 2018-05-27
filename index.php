@@ -25,6 +25,7 @@
         <!-- controllers-->
         <script src="app/controllers/usuarioController.js"></script>
         <script src="app/controllers/loginController.js"></script>
+        <script src="app/controllers/avaliacaoController.js"></script>
     </head>
 
 	<body ng-app="Hospitaliza">

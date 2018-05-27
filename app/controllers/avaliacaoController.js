@@ -1,6 +1,7 @@
 hospitaliza.controller('avaliacaoController', function($scope,avaliacaoService,$routeParams) {
 
   $scope.inserirAvaliacao = function(){      
+        console.log($scope.novaAvaliacao)
         avaliacaoService.getInsereAvaliacao($scope.novaAvaliacao).then(function (response){       			
 		
 		}); 
