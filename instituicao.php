@@ -43,25 +43,25 @@
                 <div class='row col-sm-12' style='margin-top: 50px;'>
                     <div class='col-sm-3'>
                        <h5>Total de Avaliações</h5>
-                       <div class="progress">
-                          <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                       <div class="progress" style="height: 5px;width: 80%;">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                        </div>
                     </div> 
                     <div class='col-sm-3'>
                        <h5>Avaliações Positivas</h5>
-                       <div class="progress">
-                          <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                       <div class="progress" style="height: 5px;width: 80%;">
+                          <div class="progress-bar bg-info" role="progressbar" style="width:100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                        </div>
                     </div> 
                     <div class='col-sm-3'>
                        <h5>Avaliações Negativas</h5>
-                       <div class="progress">
-                          <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                       <div class="progress" style="height: 5px;width: 80%;">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                        </div>
                     </div> 
                     <div class='col-sm-3'>
                         <h5>Indicaram o lugar</h5>
-                        <div class="progress">
+                        <div class="progress" style="height: 5px;width: 80%;">
                           <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>                 
@@ -75,7 +75,7 @@
             </div>
             <div class='row col-sm-12'>
                <div class="row col-sm-12" ng-repeat="avaliacao in avaliacoesInstituicao">
-                   <div class='col-sm-10 card cardRanking' style='padding: 20px;margin-bottom: 5px;'>   
+                   <div class='col-sm-12 card cardRanking' style='padding: 20px;margin-bottom: 5px;'>   
                        <a href='#!/avaliacao/{{avaliacao.id_avaliacao}}'><h5>{{avaliacao.titulo}}</h5></a>  
                        {{avaliacao.descricao}}   
                    </div>                 
