@@ -17,6 +17,18 @@ hospitaliza.factory('avaliacaoService', function($http) {
                             });
     }
     
+    var _getInsereNota = function(novaAvaliacao){
+        return request = $http({
+                                method: "post",
+                                url: "http://cleitonlima.com.br/slim/contribuicao.php/avaliacaoNota/",
+                                data: { 
+                                        nota:novaAvaliacao.nota,
+                                        id_avaliacao:novaAvaliacao.id_avaliacao,                                      
+                                      }
+                               
+                            });
+    }
+    
      var _getDadosAvaliacao = function (id){
 
         return request = $http.get(url+id);
@@ -26,7 +38,8 @@ hospitaliza.factory('avaliacaoService', function($http) {
 
     return {
         getInsereAvaliacao : _getInsereAvaliacao,
-        getDadosAvaliacao : _getDadosAvaliacao
+        getDadosAvaliacao : _getDadosAvaliacao,
+        getInsereNota : _getInsereNota
         
     }
 });

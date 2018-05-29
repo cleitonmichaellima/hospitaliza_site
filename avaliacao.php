@@ -22,10 +22,10 @@
             </div>
             <div class='col-sm-3'>
                 <p style="margin-bottom: -20px;">Nota</p>
-                <p style='font-size:60px;'>4.5</p>
+                <p style='font-size:60px;'>{{avaliacao.nota}}</p>
             </div>
             <div class='row col-sm-9'>
-             Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impresso
+                {{avaliacao.descricao}}
             </div>   
 	    </div>
 	    <div class='col-sm-2 card' style='padding-top: 50px !important;padding:30px;'>
