@@ -9,6 +9,7 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
 	}
 
   $scope.inserirUsuario = function(){
+      $scope.msgCadastro = '';
       // verificar se email ja nao esta cadastrado
       
       if($scope.newUser.senha!=$scope.newUser.senhaConf){
@@ -19,7 +20,7 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
       else{
           // verifica email
           usuarioService.getVerificarSeEmailJaCadastrado($scope.newUser.email).then(function (response){   
-              if(response.data==''){
+              if(response.data.email==''){
                   // novo cadastro
                   usuarioService.getInsereUsuario($scope.newUser).then(function (response){       			
 

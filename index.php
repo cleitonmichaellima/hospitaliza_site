@@ -34,7 +34,9 @@
 	<body ng-app="Hospitaliza">
 	  <ng-view></ng-view>
 	<?php
-          require "modal.php";   
+          require "modal.php";  
+          require "footer.php";
     ?>
+    
 </body>
 </html>
