@@ -10,16 +10,28 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
 
   $scope.inserirUsuario = function(){
       // verificar se email ja nao esta cadastrado
-        console.log($scope.newUser);
+      
       if($scope.newUser.senha!=$scope.newUser.senhaConf){
           $scope.msgCadastro = 'Senhas diferentes';
           return false;
           
       }
       else{
-        usuarioService.getInsereUsuario($scope.newUser).then(function (response){       			
+          // verifica email
+          usuarioService.getVerificarSeEmailJaCadastrado($scope.newUser.email).then(function (response){   
+              if(response.data==''){
+                  // novo cadastro
+                  usuarioService.getInsereUsuario($scope.newUser).then(function (response){       			
+
+                  }); 
+              }
+              else{
+                   $scope.msgCadastro = 'Email já cadastrado!Tente outro e-mail ou faça o login';
+                    return false;
+              }
 		
 		}); 
+            
       }
              
   
