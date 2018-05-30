@@ -12,8 +12,9 @@ hospitaliza.config(function($routeProvider) {
         templateUrl : "../instituicao.php",
         controller: "instituicaoController"
     })
-    .when("/search", {
-        templateUrl : "../search.php"
+    .when("/search/:termo", {
+        templateUrl : "../search.php",
+        controller: "instituicaoController"
     })
     .when("/usuario/:id_usuario", {
         templateUrl : "../cadastro.php",

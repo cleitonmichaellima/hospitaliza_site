@@ -11,9 +11,15 @@ hospitaliza.factory('instituicaoService', function($http) {
 
         return request = $http.get("http://cleitonlima.com.br/slim/instituicao.php/avaliacaoInstituicao/"+id);
     }
+     
+    var _getInstituicaoPorTermo = function (termo){
+
+        return request = $http.get("http://cleitonlima.com.br/slim/instituicao.php/buscaTermoInstituicao/"+termo);
+    }
 
     return {
-       getDadosInstituicao : _getDadosInstituicao,
-       getAvaliacaoInstituicao : _getAvaliacaoInstituicao
+        getDadosInstituicao : _getDadosInstituicao,
+        getAvaliacaoInstituicao : _getAvaliacaoInstituicao,
+        getInstituicaoPorTermo : _getInstituicaoPorTermo
     }
 });

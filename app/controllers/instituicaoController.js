@@ -6,6 +6,12 @@ hospitaliza.controller('instituicaoController', function($scope,instituicaoServi
 
             });
      }
+    
+    var carregarInstituicaoPorTermo = function (){       
+            instituicaoService.getInstituicaoPorTermo($routeParams.termo).then(function (response){ 
+                
+            });
+     }
 
   
   $scope.atualizarVisualizacoes = function (){
@@ -21,19 +27,23 @@ hospitaliza.controller('instituicaoController', function($scope,instituicaoServi
 
             });
    }
+  
+  
+  
 	 
                        
   var init = function  (){
-          $scope.instituicao = {
-                        nome: '',
-                        id_usario: ''                            
-                        }
-      
-           $scope.avaliacoesInstituicao = [];
-      
-          $scope.msgCadastro = ''
-          carregarDadosInstituicao();
-         carregarAvaliacaoInstituicao();
+            $scope.instituicao = {
+                    nome: '',
+                    id_usario: ''                            
+                    }
+
+            $scope.avaliacoesInstituicao = [];
+
+            $scope.msgCadastro = ''
+            carregarDadosInstituicao();
+            carregarAvaliacaoInstituicao();
+            carregarInstituicaoPorTermo();
                         
        }
         
