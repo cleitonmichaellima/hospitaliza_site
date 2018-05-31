@@ -1,4 +1,4 @@
-hospitaliza.controller('avaliacaoController', function($scope,avaliacaoService,$routeParams) {
+hospitaliza.controller('avaliacaoController', function($scope,avaliacaoService,$routeParams,$rootScope) {
 
   $scope.inserirAvaliacao = function(){      
         console.log($scope.novaAvaliacao)
@@ -7,7 +7,8 @@ hospitaliza.controller('avaliacaoController', function($scope,avaliacaoService,$
           $scope.novaAvaliacao.id_avaliacao =  $scope.novaAvaliacao.id_avaliacao.replace(/[^0-9]/g,'')
           $scope.novaAvaliacao.id_avaliacao = parseInt($scope.novaAvaliacao.id_avaliacao);  
 		  avaliacaoService.getInsereNota( $scope.novaAvaliacao).then(function (response){
-              
+              init();
+              $rootScope.$broadcast('recarregarInformacoesInstituicao')
           }); 
 		}); 
   }             

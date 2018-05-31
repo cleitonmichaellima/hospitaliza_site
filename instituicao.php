@@ -1,18 +1,6 @@
 	<div class="row col-sm-12" style="background: #3b3636;height: 30px;"></div>
 	<div  class='row center cardRanking'>
-		<nav class="navbar navbar-light bg-light justify-content-between  col col-sm-12 navBarPrincipal">
-			<a class="navbar-brand logo">
-				<img src="img/logo_hospitaliza.png" width="50%" style='float:left;'>
-			</a>
-			<span class="form-inline">			
-				<input id="barraProcurarNav" type="text" class='form-control'>				
-				<button class='btn btn-primary btn-sm' id="btnProcurarNav"> Procurar </button>			
-			</span>
-			<span class="form-inline">
-				<button class="btn btn-outline-secondary" type="button" id="btnCadastreseInicial" data-toggle='modal' data-target="#modalCadastre">Cadastre-se</button>	
-				<button class="btn btn-outline-success my-2 my-sm-0" data-toggle='modal' data-target="#modalLogin">Entrar</button>
-			</span>
-		</nav>		
+		<?php  require "navbar.php" ?>
 	</div>
 	<div class='row' ng-controller='instituicaoController'>
 	    <div class='col-sm-2'></div>
@@ -34,7 +22,7 @@
                 <div class='row col-sm-12' style='margin-top: 50px;'>
                     <div class='col-sm-3'>
                         <p style="margin-bottom: -20px;">Média de Notas</p>
-                        <p style='font-size:60px;'>4.5</p>
+                        <p style='font-size:60px;'>{{instituicao.mediaNota}}</p>  
                     </div>
                     <div class='row col-sm-9' style='background:gray;color:#fff;'>
                       <h1 style='margin:auto;'>LOCALIZAÇÃO</h1>
@@ -46,24 +34,28 @@
                        <div class="progress" style="height: 5px;width: 80%;">
                           <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                        </div>
+                       <h6>{{instituicao.totalAvaliacao}}</h6>
                     </div> 
                     <div class='col-sm-3'>
                        <h5>Avaliações Positivas</h5>
                        <div class="progress" style="height: 5px;width: 80%;">
                           <div class="progress-bar bg-info" role="progressbar" style="width:100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                        </div>
+                       <h6>{{instituicao.totalPositiva}}</h6>
                     </div> 
                     <div class='col-sm-3'>
                        <h5>Avaliações Negativas</h5>
                        <div class="progress" style="height: 5px;width: 80%;">
                           <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                        </div>
+                       <h6>{{instituicao.totalNegativa}}</h6>
                     </div> 
                     <div class='col-sm-3'>
                         <h5>Indicaram o lugar</h5>
                         <div class="progress" style="height: 5px;width: 80%;">
                           <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
+                        <h6>{{instituicao.totalIndicam }}</h6>
                     </div>                 
                 </div>
             </div>

@@ -14,10 +14,12 @@
 				<div class='col col-sm-3'>
 				</div>
 				<div class='col col-sm-5'>
-					<input id="barraProcurarInicial" type="text" class='form-control'>
+					<input id="barraProcurarInicial" ng-model="novoTermo" type="text" class='form-control'>
 				</div>
 				<div class='col col-sm-2'>
+				    <a href='#!/search/{{novoTermo}}'>
 					<button class='btn btn-primary btn-lg' id="btnProcurarInicial"> Procurar </button>
+                    </a>
 				</div>
 				<div class='col col-sm-2'>
 				</div>
