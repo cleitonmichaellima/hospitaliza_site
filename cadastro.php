@@ -36,17 +36,17 @@
                    </div>
                    <div class='col-sm-3'>                     
                     <li>
-                        <input type='radio' > Feminino
+                        <input type='radio' ng-model='user.sexo' value='2'> Feminino
                     </li>
                     <li>
-                        <input type='radio'> Masculino
+                        <input type='radio' ng-model='user.sexo' value='1' > Masculino
                     </li>
                    </div>
                    <div class='col-sm-2'>
                        Data de Nascimento:
                    </div>
                    <div class='col-sm-3' >
-                       <input type='text' style="width: 70%;" class='form-control'> 
+                       <input type='text' style="width: 90%;"  ng-model='user.data_nascimento' class='form-control'> 
                    </div>
                     <div class='col-sm-1'>                      
                    </div>
@@ -55,13 +55,13 @@
                 <br>
 	           <div class='row col-sm-12' style='margin-bottom: 20px;'> 
                    <div class='col-sm-2'>
-                       Telefone de Contato:
+                       Telefone:
                    </div>
                    <div class='col-sm-2' >
-                       <input type='text' style="width: 70%;"class='form-control'> 	            
+                       <input type='text' style="width: 70%;" ng-model='user.dddtelefone' class='form-control'> 	            
                    </div>
                    <div class='col-sm-3'>
-                       <input type='text' class='form-control'> 	                
+                       <input type='text' class='form-control' ng-model='user.telefone' > 	                
                    </div>
                    <div class='col-sm-4'></div>	   
                 </div> 

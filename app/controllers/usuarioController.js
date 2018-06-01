@@ -2,7 +2,7 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
      
      var carregarDadosUsuario = function (){       
 		usuarioService.getDadosUsuario($routeParams.id_usuario).then(function (response){ 
-            $scope.user.nome = response.data.nome;
+            $scope.user = response.data;
             $scope.user.id_usuario = $routeParams.id_usuario
             
 		});
@@ -60,11 +60,6 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
                             email: '',
                             senha: ''
                             }
-         $scope.user = {
-                        nome: '',
-                        id_usario: ''                            
-                        }
-      
       
           $scope.msgCadastro = ''
           carregarDadosUsuario();

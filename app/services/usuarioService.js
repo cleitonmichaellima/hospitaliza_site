@@ -35,7 +35,12 @@ hospitaliza.factory('usuarioService', function($http) {
                                 url: url,
                                 data: { 
                                         nome:user.nome,
-                                        id_usuario: user.id_usuario
+                                        id_usuario: user.id_usuario,
+                                        sexo:user.sexo,
+                                        data_nascimento: user.data_nascimento,
+                                        telefone:user.telefone,
+                                        dddtelefone:user.dddtelefone                                   
+                                        
                                       }                              
                             });
     }
