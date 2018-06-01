@@ -6,7 +6,7 @@
 	    <div class='col-sm-2'></div>
 	    <div class='row col-sm-2 card' style='margin-top:50px;padding:20px;'>            
             Seja bem-vindo 
-            <h4>{{user.nome}}</h4>
+            <h4>{{nomeMostra}}</h4>
             <ul>               
                 <li>Alterar Senha</li>
                 <li>Deletar Conta</li>

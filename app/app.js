@@ -17,6 +17,13 @@ hospitaliza.config(function($routeProvider) {
         controller: "instituicaoController"
     })
     .when("/usuario/:id_usuario", {
+        resolve: {
+			check: function($location, loginService) {
+				if(!loginService.isUserLoggedIn()) {
+					$location.path('/');/// redirecionar
+				}
+			},
+		},
         templateUrl : "../cadastro.php",
         controller: "usuarioController"
     });

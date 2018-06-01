@@ -1,12 +1,12 @@
-hospitaliza.controller('usuarioController', function($scope,usuarioService,$routeParams) {
-  
-  var carregarDadosUsuario = function (){       
+hospitaliza.controller('usuarioController', function($scope,usuarioService,$routeParams,loginService) {      
+     
+     var carregarDadosUsuario = function (){       
 		usuarioService.getDadosUsuario($routeParams.id_usuario).then(function (response){ 
             $scope.user.nome = response.data.nome;
             $scope.user.id_usuario = $routeParams.id_usuario
             
 		});
-	}
+	 }
 
   $scope.inserirUsuario = function(){
       $scope.msgCadastro = '';
@@ -46,7 +46,9 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
   }
 	 
                        
-  var init = function  (){
+  var init = function  (){  
+          $scope.nomeMostra = loginService.getName();
+
           $scope.newUser = {
                             nome: '',
                             email: '',

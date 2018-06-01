@@ -71,7 +71,11 @@
 							<label>Senha:</label>
 							<input type='password' ng-model='login.senha' class='form-control'>
 						</div>
-						<div class='col col-sm-6'></div>						
+						<div class='col col-sm-6'>
+						</div>	
+						<div class='col col-sm-12' style='text-alig:center;'>						    
+						    <font ng-bind='msgError' style='color:red;font-size:15px;'></font>
+						</div>						
 					</div>         
 				</div>
 				<div class="modal-footer">
