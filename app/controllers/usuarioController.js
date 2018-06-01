@@ -47,7 +47,7 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
   $scope.atualizarDados = function (){
       
       usuarioService.getAtualizarDadosUsuario($scope.user).then(function (response){ 
-            
+        
       })
   }
 	 

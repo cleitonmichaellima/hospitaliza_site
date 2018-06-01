@@ -64,7 +64,7 @@
                        <input type='text' class='form-control' ng-model='user.telefone' > 	                
                    </div>
                    <div class='col-sm-4'></div>	   
-                </div> 
+                </div>                 
                  <div class='col-sm-12' style='margin-top:20px;'>
                     <center>
                         <button class='btn btn-info' style='margin:auto;' ng-click="atualizarDados()"> Atualizar Dados pessoais</button>
