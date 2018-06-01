@@ -7,6 +7,12 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
             
 		});
 	 }
+     var carregarAvaliacaoUsuario = function (){       
+            usuarioService.getAvaliacaoUsuario($routeParams.id_usuario).then(function (response){ 
+                    $scope.avaliacoesUsuario = response.data
+
+            });
+     }
 
   $scope.inserirUsuario = function(){
       $scope.msgCadastro = '';
@@ -62,6 +68,7 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
       
           $scope.msgCadastro = ''
           carregarDadosUsuario();
+          carregarAvaliacaoUsuario();
                         
        }
     

@@ -1,5 +1,5 @@
 <div class="row col-sm-12" style="background: #ddd;height: 1px;margin-top:100px;"></div>
-<div class='row col-sm-12'>
+<div class='row col-sm-12' style="background-color:#f8f9f1 !important;">
     <div class='col-sm-2'></div>
     <div class='row col-sm-8' style='margin:60px;'>
         <div class='col-sm-3'>

@@ -79,32 +79,32 @@
 	               <div class='col-sm-3'>Filtre por: Todos</div>
 	               <div class='col-sm-3'>Avaliação Positiva</div>
                    <div class='col-sm-3'>Avaliação Negativa</div>
-                   <div class='col-sm-3'>Indicação</div>                   
+                   <div class='col-sm-3'>Data</div>                   
 	           </div>
-	           <div class='col-sm-12 card cardRanking' style='padding: 15px;margin-top:20px;'>   
-                    <div style='display:inline;'>
+	           <div ng-if="avaliacoesUsuario" class='col-sm-12 card cardRanking' ng-repeat="avaliacao in avaliacoesUsuario" style='padding: 15px;margin-top:20px;'>   
+                   <div style='display:inline;'>
                         <span class="fa fa-star checkedStar"></span>
-                        <span class="fa fa-star checkedStar"></span>
-                        <span class="fa fa-star checkedStar"></span>
-                        <span class="fa fa-star checkedStar"></span>
-                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star" ng-class="{ 'checkedStar': avaliacao.nota>=2  }"></span>
+                        <span class="fa fa-star" ng-class="{ 'checkedStar': avaliacao.nota>=3 }"></span>
+                        <span class="fa fa-star" ng-class="{ 'checkedStar': avaliacao.nota>=4 }"></span>
+                        <span class="fa fa-star" ng-class="{ 'checkedStar': avaliacao.nota>=5 }" ></span>
                     </div>
-                    <h5 style='display:inline;'> Ótima instituição</h5> 
-                    <i>Hospital Santa Casa</i> 23/05/2018 ás 19:00
-                    Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVIdsdfsdfdsfs....          
-               </div>
-                <div class='col-sm-12 card cardRanking' style='padding: 15px;margin-top:10px;'>   
-                    <div style='display:inline;'>
-                        <span class="fa fa-star checkedStar"></span>
-                        <span class="fa fa-star checkedStar"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                    </div>
-                    <h5 style='display:inline;'> Péssima instituição</h5> 
-                   <i>Hospital Santa Casa</i> 23/05/2018 ás 19:00
-                   Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI...         
-               </div>
+                    <h5 style='display:inline;'>
+                      <a href='#!/avaliacao/{{avaliacao.id_avaliacao}}'>
+                       {{avaliacao.titulo}}
+                      </a>
+                     </h5> 
+                   <a href='#!/instituicao/{{avaliacao.id_instituicao}}'>
+                       <i>{{avaliacao.nome}}</i>
+                    </a>
+                   {{avaliacao.data}}<br>
+                   {{avaliacao.descricao}}       
+               </div> 
+                <div ng-if="avaliacoesUsuario.length==0" class='col-sm-12'>
+                    <center>                        
+                        <h3> Não há avaliações suas</h3>
+                    </center>
+               </div>   
 	       </div>
 	    </div>	     
 	    <div class='col-sm-2'></div>
