@@ -4,10 +4,10 @@
     <div class='row col-sm-8' style='margin:60px;'>
         <div class='col-sm-3'>
             <h4> Institucional </h4>
-            <li>Quem Somos </li>
-            <li>Objetivo </li>
-            <li>Termos de Uso</li>
-            <li>Política de Privacidade</li>            
+            <a href='#!/sobre/#quemSomos'><li>Quem Somos </li></a>
+            <a href='#!/sobre/#objetivos'><li>Objetivo </li></a>
+            <a href='#!/sobre/#termos'><li>Termos de Uso</li></a>
+            <a href='#!/sobre/#politicas'><li>Política de Privacidade</li></a>           
         </div>
         <div class='col-sm-3'>
             <h4> Dúvidas Frequentes </h4>
@@ -18,7 +18,7 @@
         </div>
         <div class='col-sm-3'>
             <h4>Quer entrar em contato? </h4>           
-            <button class='btn btn-primary'>Fale Conosco</button>
+            <button class='btn btn-primary' data-toggle='modal' data-target="#modalContato">Fale Conosco</button>
         </div>
         <div class='col-sm-3'>
             <h4>Siga nossas redes </h4>

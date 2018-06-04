@@ -144,3 +144,49 @@
 			</div>
 		</div>
 	</div>
+	
+    <!-- Modal Contato -->
+	<div class="modal fade" id="modalContato"    tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Contate-nos</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class='row'>
+						<div class='col col-sm-1'></div>
+						<div class='col col-sm-10'>
+							<label>E-mail:</label>
+							<input type='text'  ng-model='login.email' class='form-control'>
+						</div>
+						<div class='col col-sm-1'></div>
+						<div class='col col-sm-1'></div>
+						<div class='col col-sm-10'>
+							<label>Título do Assunto:</label>
+							<input type='text' class='form-control'>
+						</div>
+                        <div class='col col-sm-1'></div>
+						<div class='col col-sm-1'></div>
+						<div class='col col-sm-10'>
+							<label>Descrição do Assunto:</label>
+                            <textarea class='form-control'></textarea>
+						</div>
+						<div class='col col-sm-1'>
+						</div>	
+						<div class='col col-sm-12' style='text-alig:center;'>						    
+						    <font ng-bind='msgError' style='color:red;font-size:15px;'></font>
+						</div>						
+					</div>         
+				</div>
+				<div class="modal-footer">
+					<center>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-success" >Enviar</button>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -16,6 +16,9 @@ hospitaliza.config(function($routeProvider) {
         templateUrl : "../search.php",
         controller: "instituicaoController"
     })
+    .when("/sobre/", {
+        templateUrl : "../sobre.php",       
+    })
     .when("/usuario/:id_usuario", {
         resolve: {
 			check: function($location, loginService) {
