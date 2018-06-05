@@ -176,7 +176,7 @@
 	</div>
 	
     <!-- Modal Contato -->
-	<div class="modal fade" id="modalContato"    tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="modalContato"    ng-controller='contatoController' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -186,35 +186,42 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<div class='row'>
+					<div class='row' ng-if='!retornoContato'>
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-10'>
 							<label>E-mail:</label>
-							<input type='text'  ng-model='login.email' class='form-control'>
+							<input type='text'  ng-model='contato.email' class='form-control'>
 						</div>
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-10'>
 							<label>Título do Assunto:</label>
-							<input type='text' class='form-control'>
+							<input type='text' ng-model='contato.tituloAssunto' class='form-control'>
 						</div>
                         <div class='col col-sm-1'></div>
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-10'>
 							<label>Descrição do Assunto:</label>
-                            <textarea class='form-control'></textarea>
+                            <textarea class='form-control' ng-model='contato.descricaoAssunto' ></textarea>
 						</div>
 						<div class='col col-sm-1'>
-						</div>	
-						<div class='col col-sm-12' style='text-alig:center;'>						    
-						    <font ng-bind='msgError' style='color:red;font-size:15px;'></font>
-						</div>						
-					</div>         
+						</div>										
+					</div> 
+					<div class='row' ng-if='retornoContato'>
+					    <div class='col col-sm-1'></div>
+                        <div class='col col-sm-10'>
+                            <div style='width:80%' class="alert alert-{{contatoStatus}}"  ng-if="msgContato" role="alert">
+                                  {{msgAtualizaCadastro}}                          
+                            </div>
+                        </div>
+						<div class='col col-sm-1'>
+						</div>
+					</div>        
 				</div>
 				<div class="modal-footer">
 					<center>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-success" >Enviar</button>
+						<button type="button" class="btn btn-success" ng-click="enviar();" ng-class="{ 'disabled': !contato.email ||!contato.tituloAssunto ||!contato.descricaoAssunto}" >Enviar</button>
 					</center>
 				</div>
 			</div>

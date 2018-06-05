@@ -21,6 +21,7 @@
         <script src="app/services/loginService.js"></script>
         <script src="app/services/avaliacaoService.js"></script>
         <script src="app/services/instituicaoService.js"></script>
+        <script src="app/services/contatoService.js"></script>
         
         
         <!-- controllers-->
@@ -29,6 +30,7 @@
         <script src="app/controllers/avaliacaoController.js"></script>
         <script src="app/controllers/instituicaoController.js"></script>
         <script src="app/controllers/navController.js"></script>
+        <script src="app/controllers/contatoController.js"></script>
 
     </head>
 
