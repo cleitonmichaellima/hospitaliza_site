@@ -1,4 +1,4 @@
-hospitaliza.controller('usuarioController', function($scope,usuarioService,$routeParams,loginService) {      
+hospitaliza.controller('usuarioController', function($scope,usuarioService,$routeParams,loginService,$location) {      
      
      var carregarDadosUsuario = function (){       
 		usuarioService.getDadosUsuario($routeParams.id_usuario).then(function (response){ 
@@ -29,7 +29,15 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
               if(response.data.email==''){
                   // novo cadastro
                   usuarioService.getInsereUsuario($scope.newUser).then(function (response){       			
-
+                      // sucesso cadastro
+                      if(response.data.status==1){
+                        $('#modalCadastre').modal('hide');
+				        $location.path('/usuario/'+response.data.id_usuario);	
+                      }
+                      else{
+                           $scope.msgCadastro = 'Erro ao efetuar cadastro, tente mais tarde';
+                           return false;
+                      }
                   }); 
               }
               else{
@@ -47,14 +55,26 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
   $scope.atualizarDados = function (){
       
       usuarioService.getAtualizarDadosUsuario($scope.user).then(function (response){ 
-        
+          
+          if(response.data.status==1){
+              $scope.atualizaStatus = 'success';
+              $scope.msgAtualizaCadastro = 'Cadastro atualizado com sucesso';
+           }
+           else{
+              $scope.msgAtualizaCadastro = 'Erro ao atualizar cadastro, tente mais tarde';
+              $scope.atualizaStatus = 'danger'; 
+          }
       })
   }
-	 
+  
+  $scope.hideAlert =  function(){
+       $scope.atualizaStatus = '';
+       $scope.msgAtualizaCadastro = '';
+  }
                        
   var init = function  (){  
           $scope.nomeMostra = loginService.getName();
-
+          
           $scope.newUser = {
                             nome: '',
                             email: '',

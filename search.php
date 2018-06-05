@@ -14,7 +14,7 @@
 	           Você pesquisou pelo termo:
 	           <h3>{{termoMostrar}} </h3>	           
 	       </div>
-	       <div class='row col-sm-12'>
+	       <div class='row col-sm-12' ng-if='avaliacaoEncotrada.length>0'>
 	           <div class='row col-sm-12' style="margin-top:20px;">	               
 	               <div class='col-sm-3'>Filtre por: Todos</div>
 	               <div class='col-sm-3'>Avaliação Positiva</div>
@@ -40,6 +40,9 @@
                    {{avaliacao.data}}<br>
                     {{avaliacao.descricao}}         
                </div>
+	       </div>
+	       <div class='row col-sm-12' ng-if='avaliacaoEncotrada==1'>
+	           <h6> Não foram encontrados resultados para essa pesquisa</h6>
 	       </div>
 	    </div>
 	    <div class='col-sm-2 card' style='padding: 50px !important;padding:20px;'>

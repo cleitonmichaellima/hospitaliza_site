@@ -88,7 +88,7 @@
 		</div>
 	</div>
 	
-    <!-- Modal cadastre-se -->
+    <!-- Modal AVALIAR-se -->
 	<div class="modal fade" id="modalAvaliar"   ng-controller="avaliacaoController" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
@@ -99,7 +99,7 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<div class='row'>
+					<div class='row' ng-if="logado">
 						<div class='col col-sm-1'></div>
 						<div class='col col-sm-10'>
 							<label>Titulo Avaliação</label>
@@ -133,7 +133,37 @@
                             </div>				 
 						</div>
 						<div class='col col-sm-1'></div>							
-					</div>         
+					</div> 
+					<div class='row' ng-if="!logado">
+                        <div class='col-sm-1'></div>
+                        <div class='col-sm-10'>
+                            <h5> Olá,
+                                <br>
+                                   Para fazer a avaliação da instituição de saúde. È necessário que vocês esteja conectado ao portal.
+                            </h5>
+                        </div>
+                        <div class='col-sm-1'></div>
+                        <div class='col-sm-1'></div>
+                        <div class="col-sm-5">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Cadastre-se</h5>
+                                <p class="card-text">Caso você não possua cadastro, clique no botão abaixo para efetua-lo</p>
+                                <button class="btn btn-outline-secondary" type="button" id="btnCadastreseInicial" data-dismiss="modal" data-toggle="modal" data-target="#modalCadastre">Cadastre-se</button>
+                              </div>
+                            </div>
+                        </div>   
+                        <div class="col-sm-5">
+                            <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Logue-se</h5>
+                                <p class="card-text">Caso já possua um cadastro em nosso portal, é só logar e fazer a sua avaliação</p>
+                                <button class="btn btn-outline-success my-2 my-sm-0" data-dismiss="modal" data-toggle="modal" data-target="#modalLogin">Entrar</button>
+                              </div>
+                            </div>
+                        </div>  
+                        <div class='col-sm-1'></div>
+					</div>    
 				</div>
 				<div class="modal-footer">
 					<center>

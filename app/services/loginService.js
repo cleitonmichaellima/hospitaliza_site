@@ -20,11 +20,11 @@ hospitaliza.factory('loginService', function($http) {
 		return nomeUsuario;
 	};
 
-	this.setID = function(userID) {
-		id = userID;
+	var _getIdUsuario = function() {
+		return id_usuario;
 	};
     
-	var _getPass_user = function() {
+	var _getPassUser = function() {
 		return pass_user;
 	};
 
@@ -42,15 +42,17 @@ hospitaliza.factory('loginService', function($http) {
 
 	var _saveData = function(data) {        
 		pass_user = data.pass_user;
-        nomeUsuario = data.nome;
-		id_usuario = data.id;
+        nomeUsuario = data.nomeUsuario;
+		id_usuario = data.id_usuario;
 		loggedin = true;
         
 		localStorage.setItem('login', JSON.stringify({
-			pass_user: pass_user,
-			id_usuario: id_usuario,
-            nomeUsuario : nomeUsuario
+			pass_user : pass_user,
+            nomeUsuario : nomeUsuario,
+            id_usuario : id_usuario
 		}));
+        
+        
             
 	};
 
@@ -67,7 +69,8 @@ hospitaliza.factory('loginService', function($http) {
         clearData : _clearData,
         isUserLoggedIn : _isUserLoggedIn,
         getName : _getName,
-        getPass_user : _getPass_user
+        getIdUsuario : _getIdUsuario,
+        getPassUser : _getPassUser
 
     }
 

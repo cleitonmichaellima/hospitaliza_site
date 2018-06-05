@@ -45,10 +45,13 @@ hospitaliza.controller('instituicaoController', function($scope,instituicaoServi
      carregarAvaliacaoInstituicao();
   });
   
-  
+  $scope.setInstituicao =  function(){
+    $rootScope.$broadcast('setIdInstituicao',$routeParams.id_instituicao)
+  }
 	 
                        
   var init = function  (){
+      console.log(localStorage.getItem('login'));
             $scope.instituicao = {
                     nome: '',
                     id_usario: '',

@@ -6,12 +6,13 @@
 	    <div class='col-sm-2'></div>
 	    <div class='row col-sm-2 card' style='margin-top:50px;padding:20px;'>            
             Seja bem-vindo 
-            <h4>{{nomeMostra}}</h4>
-            <ul>               
-                <li>Alterar Senha</li>
-                <li>Deletar Conta</li>
-                <li>Finalizar Sessão</li>
-            </ul>  
+            <img src="https://www.flaticon.com/premium-icon/icons/svg/310/310767.svg" style="width: 30%;">
+            <h6>{{nomeMostra}}</h6>
+            <hr>         
+            <li>Alterar Senha</li>
+            <li>Deletar Conta</li>
+            <li>Finalizar Sessão</li>
+            
 	    </div>	   
 	    <div class='row col-sm-6 cardRanking ' style='margin-top:50px;padding:20px;'>
             <div class='col-sm-12'>
@@ -64,7 +65,17 @@
                        <input type='text' class='form-control' ng-model='user.telefone' > 	                
                    </div>
                    <div class='col-sm-4'></div>	   
-                </div>                 
+                </div>   
+                <div class='col-sm-12'>
+                   <center>
+                        <div style='width:80%' class="alert alert-{{atualizaStatus}} alert-dismissible fade show"  ng-if="msgAtualizaCadastro" role="alert">
+                          {{msgAtualizaCadastro}}
+                          <button type="button" class="close"  aria-label="Close" ng-click="hideAlert()">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                    </center>
+                </div>              
                  <div class='col-sm-12' style='margin-top:20px;'>
                     <center>
                         <button class='btn btn-info' style='margin:auto;' ng-click="atualizarDados()"> Atualizar Dados pessoais</button>

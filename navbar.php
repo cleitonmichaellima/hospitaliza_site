@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light bg-light justify-content-between  col col-sm-12 navBarPrincipal">
-    <a class="navbar-brand logo">
+    <a class="navbar-brand logo" href="/#!/">
         <img src="img/logo_hospitaliza.png" width="50%" style='float:left;'>
     </a>
     <span class="form-inline">			
