@@ -28,6 +28,7 @@
         <script src="app/controllers/loginController.js"></script>
         <script src="app/controllers/avaliacaoController.js"></script>
         <script src="app/controllers/instituicaoController.js"></script>
+        <script src="app/controllers/navController.js"></script>
 
     </head>
 

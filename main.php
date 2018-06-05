@@ -1,13 +1,5 @@
 <div  class='row center'>
-		<nav class="navbar navbar-light bg-light justify-content-between  col col-sm-12 navBarPrincipal">
-			<a class="navbar-brand">
-				<img src="img/logo_hospitaliza.png" width="15%" style='float:left;'>
-			</a>
-			<span class="form-inline">
-				<button class="btn btn-outline-secondary" type="button" id="btnCadastreseInicial" data-toggle='modal' data-target="#modalCadastre">Cadastre-se</button>	
-				<button class="btn btn-outline-success my-2 my-sm-0" data-toggle='modal' data-target="#modalLogin">Entrar</button>
-			</span>
-		</nav>
+		<?php  require "navbar.php" ?>
 		<div class="jumbotron col col-sm-12 jumbPrincipal" >
 			<h3 class="display-4 textJumbPrincipal">Digite o nome do hospital</h3>
 			<div class='row'>

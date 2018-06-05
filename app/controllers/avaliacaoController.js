@@ -39,7 +39,7 @@ var id_instituicao =  '';
         $scope.logado = loginService.getPassUser()
         
         $scope.novaAvaliacao = {
-                                    id_usuario:'',
+                                    id_usuario:loginService.getIdUsuario(),
                                     id_instituicao:id_instituicao,
                                     titulo:'',
                                     descricao : '',
