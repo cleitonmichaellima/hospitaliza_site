@@ -75,10 +75,12 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
   var init = function  (){  
           $scope.nomeMostra = loginService.getName();
           loginService.isUserLoggedIn();    
-      
-          if($routeParams.id_usuario!=loginService.getIdUsuario()){
-            //  $location.path('/error/');	
+          if($routeParams.id_usuario!=''){
+            if($routeParams.id_usuario!=loginService.getIdUsuario()){
+              $location.path('/error/');	
+            }  
           }
+          
           $scope.newUser = {
                             nome: '',
                             email: '',
