@@ -77,7 +77,7 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
           loginService.isUserLoggedIn();    
       
           if($routeParams.id_usuario!=loginService.getIdUsuario()){
-              $location.path('/error/');	
+            //  $location.path('/error/');	
           }
           $scope.newUser = {
                             nome: '',

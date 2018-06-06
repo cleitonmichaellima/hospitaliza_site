@@ -3,7 +3,8 @@ var hospitaliza = angular.module('Hospitaliza', ['ngRoute']);
 hospitaliza.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "../main.php"
+        templateUrl : "../main.php",
+        controller: "instituicaoController"
     })
     .when("/avaliacao/:id_avaliacao", {
         templateUrl : "../avaliacao.php"
@@ -21,6 +22,9 @@ hospitaliza.config(function($routeProvider) {
     })
     .when("/error/", {
         templateUrl : "../error.php",       
+    })
+    .when("/duvidas/", {
+        templateUrl : "../duvidas.php",       
     })
     .when("/usuario/:id_usuario", {
         resolve: {

@@ -4,11 +4,11 @@ hospitaliza.controller('contatoController', function($scope,loginService,contato
         contatoService.enviarContato($scope.contato).then(function (response){ 
             if(response.data.status==1){               
                 $scope.contatoStatus = 'success';
-                $scope.msgAtualizaCadastro = 'Obrigado por entrar em contato, retornaremos assim que possível. ';
+                $scope.msgContato = 'Obrigado por entrar em contato, retornaremos assim que possível. ';
             }
             else{
-                scope.contatoStatus = 'danger';
-                $scope.msgAtualizaCadastro = 'Ocorreu um erro ao entrar em contato, por favor, tente mais tarde.';
+                $scope.contatoStatus = 'danger';
+                $scope.msgContato = 'Ocorreu um erro ao entrar em contato, por favor, tente mais tarde.';
             }
             
             $scope.retornoContato = 1;

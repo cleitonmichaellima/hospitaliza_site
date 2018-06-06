@@ -210,8 +210,8 @@
 					<div class='row' ng-if='retornoContato'>
 					    <div class='col col-sm-1'></div>
                         <div class='col col-sm-10'>
-                            <div style='width:80%' class="alert alert-{{contatoStatus}}"  ng-if="msgContato" role="alert">
-                                  {{msgAtualizaCadastro}}                          
+                            <div class="alert alert-{{contatoStatus}}"  ng-if="msgContato" role="alert">
+                                  {{msgContato}}                          
                             </div>
                         </div>
 						<div class='col col-sm-1'>
@@ -221,7 +221,7 @@
 				<div class="modal-footer">
 					<center>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-success" ng-click="enviar();" ng-class="{ 'disabled': !contato.email ||!contato.tituloAssunto ||!contato.descricaoAssunto}" >Enviar</button>
+						<button type="button" class="btn btn-success" ng-if="!retornoContato" ng-click="enviar();" ng-class="{ 'disabled': !contato.email ||!contato.tituloAssunto ||!contato.descricaoAssunto}" >Enviar</button>
 					</center>
 				</div>
 			</div>

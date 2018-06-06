@@ -2,19 +2,19 @@
 	<div  class='row center cardRanking'>
 		<?php  require "navbar.php" ?>
 	</div>
-	<div class='row' >
+	<div class='row'>
 	    <div class='col-sm-2'></div>
 	    <div class='row col-sm-2 card' style='margin-top:50px;padding:20px;'>  
-            <ul>               
-                <li>Quem Somos </li>
-                <li>Objetivo</li>
-                <li>Termos de Uso</li>
-                <li>Políticas de Privacidade</li>
+            <ul>          
+                <li>Como se cadastrar </li>
+                <li>Como acessar</li>
+                <li>Como fazer avaliação</li>
+                <li>Quero recuperar minha senha</li>
             </ul>  
 	    </div>	   
 	    <div class='row col-sm-6 cardRanking ' style='margin-top:50px;padding:20px;'>
             <div class='col-sm-12'>
-                <h2 id="quemSomos">Quem Somos</h2>
+                <h2 id="comoCadastrar">Como se cadastrar</h2>
             </div>            
             <div class='row col-sm-12'>
                <div class='col-sm-1'></div>
@@ -24,7 +24,7 @@
                 <div class='col-sm-1'></div>
 	       </div>
            <div class='col-sm-12'>
-                <h2 id="objetivos">Objetivo</h2>
+                <h2 id="comoAcessar">Como acessar</h2>
             </div>            
             <div class='row col-sm-12'>
                <div class='col-sm-1'></div>
@@ -34,7 +34,7 @@
                 <div class='col-sm-1'></div>
 	       </div> 
 	       <div class='col-sm-12'>
-                <h2 id="termos" >Termos de Uso</h2>
+                <h2 id="comoFazerAvaliacao" >Como fazer avaliação</h2>
             </div>            
             <div class='row col-sm-12'>
                <div class='col-sm-1'></div>
@@ -66,7 +66,7 @@
                 <div class='col-sm-1'></div>
 	       </div>          
 	       <div class='col-sm-12'>
-                <h2 id="politicas">Políticas de Privacidade</h2>
+                <h2 id="comoRecuperarSenha">Quero recuperar minha senha</h2>
             </div>            
             <div class='row col-sm-12'>
                <div class='col-sm-1'></div>

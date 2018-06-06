@@ -11,10 +11,10 @@
         </div>
         <div class='col-sm-3'>
             <h4> Dúvidas Frequentes </h4>
-            <li>Como se cadastrar</li>
-            <li>Como acessar </li>
-            <li>Como fazer avaliação</li>
-            <li>Quero recuperar minha senha</li>  
+            <a href='#!/duvidas/#comoCadastrar'><li>Como se cadastrar</li></a>
+            <a href='#!/duvidas/#comoAcessar'><li>Como acessar </li></a>
+            <a href='#!/duvidas/#comoFazerAvaliacao'><li>Como fazer avaliação</li></a>
+            <a href='#!/duvidas/#comoRecuperarSenha'><li>Quero recuperar minha senha</li></a>  
         </div>
         <div class='col-sm-3'>
             <h4>Quer entrar em contato? </h4>           

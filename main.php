@@ -26,76 +26,52 @@
                 </center>
             </div>
             <div class="col-sm-1"></div>
-            <div class=" row col-sm-10">
-                <div class="col-sm-1"></div>               
-                <div class="col-sm-2 cardRanking center" >
+            <div class=" row col-sm-10">                              
+                <div class="col-sm-3 cardRanking center"  style="font-size: 14px;">
                     <h4> Instituições bem avaliados</h4>
+                    <hr>
                     <ul>
-                        <li> 
-                            <b> - Instiuicao 1 </b>
+                        <li ng-repeat='melhorAvaliada in melhoresAvaliadas'> 
+                            <b>{{melhorAvaliada.nome}}</b>
                             <br>
                             <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star"></span>
-                        </li>
-                        <li>
-                            <b> - Instiuicao 2 </b>
-                            <br>
-                            <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star "></span>
-                            <span class="fa fa-star"></span>
-                        </li>
-                        <li>
-                            <b> - Instiuicao 3 </b>
-                            <br>
-                            <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star checkedStar"></span>
-                            <span class="fa fa-star"></span>
-                        </li>
-                        <li> <b> - Instiuicao 4 </b></li>
-                        <li> <b> - Instiuicao 5 </b></li>
-                    </ul>
-                    <span>
-                        <button class='btn btn-info btn-sm'> Ver Mais </button>
-                    </span>
+                            <span class="fa fa-star" ng-class="{ 'checkedStar': melhorAvaliada.mediaNota>=2  }"></span>
+                            <span class="fa fa-star" ng-class="{ 'checkedStar': melhorAvaliada.mediaNota>=3 }"></span>
+                            <span class="fa fa-star" ng-class="{ 'checkedStar': melhorAvaliada.mediaNota>=4 }"></span>
+                            <span class="fa fa-star" ng-class="{ 'checkedStar': melhorAvaliada.mediaNota>=5 }" ></span>
+                        </li>                        
+                    </ul>                    
                 </div>  
-                <div class="col-sm-2 cardRanking center">
+                <div class="col-sm-3 cardRanking center" style='font-size: 14px;'>
                      <h4> Instituições mal avaliados</h4>
+                     <hr>
                      <ul>
-                        <li> <b> - Instiuicao 1 </b></li>
-                        <li> <b> - Instiuicao 2 </b></li>
-                        <li> <b> - Instiuicao 3 </b></li>
-                        <li> <b> - Instiuicao 4 </b></li>
-                        <li> <b> - Instiuicao 5 </b></li>
+                        <li ng-repeat='piorAvaliada in pioresAvaliadas' > 
+                            <b>{{piorAvaliada.nome}}</b>
+                            <br>
+                            <span class="fa fa-star checkedStar"></span>
+                            <span class="fa fa-star" ng-class="{ 'checkedStar': piorAvaliada.mediaNota>=2  }"></span>
+                            <span class="fa fa-star" ng-class="{ 'checkedStar': piorAvaliada.mediaNota>=3 }"></span>
+                            <span class="fa fa-star" ng-class="{ 'checkedStar': piorAvaliada.mediaNota>=4 }"></span>
+                            <span class="fa fa-star" ng-class="{ 'checkedStar': piorAvaliada.mediaNota>=5 }" ></span>                        
+                        </li>
+                    
                     </ul>
                 </div>              
-                <div class="col-sm-2 cardRanking center">
-                     <h4> Instituições mais procuradas</h4>
+                <div class="col-sm-3 cardRanking center" style='font-size: 14px;'>
+                     <h4> Instituições mais indicadas</h4>
+                     <hr>
                      <ul>
-                        <li> <b> - Instiuicao 1 </b></li>
-                        <li> <b> - Instiuicao 2 </b></li>
-                        <li> <b> - Instiuicao 3 </b></li>
-                        <li> <b> - Instiuicao 4 </b></li>
-                        <li> <b> - Instiuicao 5 </b></li>
+                        <li ng-repeat='maisIndicada in maisIndicadas' > 
+                            <b>{{maisIndicada.nome}}</b>
+                            <br>
+                            <div class="progress" style="height: 5px;width: 80%;">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            {{maisIndicada.indicados}}
+                        </li>
                     </ul>
-                </div>  
-                <div class="col-sm-2 cardRanking center">
-                     <h4> Termos mais utilizados</h4>
-                     <ul>
-                        <li> <b> - Hospital e Saúde </b></li>
-                        <li> <b> - Hospital Porto Alegre </b></li>
-                        <li> <b> - dfdsfs </b></li>
-                        <li> <b> - Lorem Ipsum  </b></li>
-                        <li> <b> - tatatatataatat </b></li>
-                    </ul>
-                </div>  
-                <div class="col-sm-1" ></div>
+                </div>                
             </div>            
             <div class="col-sm-1" ></div>		    
 		</div>

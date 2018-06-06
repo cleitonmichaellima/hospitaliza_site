@@ -34,10 +34,31 @@ hospitaliza.controller('instituicaoController', function($scope,instituicaoServi
   }
   
   var carregarAvaliacaoInstituicao = function (){       
-            instituicaoService.getAvaliacaoInstituicao($routeParams.id_instituicao).then(function (response){ 
-                    $scope.avaliacoesInstituicao = response.data
+        instituicaoService.getAvaliacaoInstituicao($routeParams.id_instituicao).then(function (response){ 
+                $scope.avaliacoesInstituicao = response.data
 
-            });
+        });
+   }
+  
+   var carregarRankingMelhoresAvaliados = function (){       
+        instituicaoService.getRanking(1).then(function (response){ 
+                $scope.melhoresAvaliadas = response.data
+
+        });
+   }
+   
+   var carregarRankingPioresAvaliados = function (){       
+        instituicaoService.getRanking(2).then(function (response){ 
+                $scope.pioresAvaliadas = response.data
+
+        });
+   }
+   
+   var carregarRankingMaisIndicadas = function (){       
+        instituicaoService.getRanking(3).then(function (response){ 
+                $scope.maisIndicadas = response.data
+
+        });
    }
   
   $scope.$on("recarregarInformacoesInstituicao",  function(events) {
@@ -51,7 +72,7 @@ hospitaliza.controller('instituicaoController', function($scope,instituicaoServi
 	 
                        
   var init = function  (){
-      console.log(localStorage.getItem('login'));
+        
             $scope.instituicao = {
                     nome: '',
                     id_usario: '',
@@ -68,6 +89,9 @@ hospitaliza.controller('instituicaoController', function($scope,instituicaoServi
             carregarDadosInstituicao();
             carregarAvaliacaoInstituicao();
             carregarInstituicaoPorTermo();
+            carregarRankingMaisIndicadas();
+            carregarRankingMelhoresAvaliados();
+            carregarRankingPioresAvaliados();
             
                         
        }
