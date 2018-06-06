@@ -38,8 +38,7 @@
                 <div class="col-sm-3 cardRanking center"  style="font-size: 14px;">
                     <h4> Instituições bem avaliados</h4>
                     <hr>
-                    <ul>
-                       
+                    <ul>                       
                         <li ng-repeat='melhorAvaliada in melhoresAvaliadas'> 
                             <a href="#!/instituicao/{{melhorAvaliada.id_instituicao}}">  
                                 <b>{{melhorAvaliada.nome}}</b>
