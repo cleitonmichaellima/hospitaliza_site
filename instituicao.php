@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="row col-sm-12" style="margin-top: 50px;">
-                  <button style="margin: auto;" class="btn btn-outline-success btn-lg" data-target="#modalAvaliar" ng-click="setInstituicao()"data-toggle="modal"> Avaliar Instituição </button>
+                  <button style="margin: auto;" class="btn btn-outline-success btn-lg" data-target="#modalAvaliar" ng-click="setInstituicao()" data-toggle="modal"> Avaliar Instituição </button>
             </div>
             <div class='row col-sm-12'>
                 <h4> Avaliações de Usuários</h4>

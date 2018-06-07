@@ -75,7 +75,7 @@
                      <hr>
                      <ul>
                         <li ng-repeat='maisIndicada in maisIndicadas' > 
-                            <a href="#!/instituicao/{{melhorAvaliada.id_instituicao}}">
+                            <a href="#!/instituicao/{{maisIndicada.id_instituicao}}">
                                 <b>{{maisIndicada.nome}}</b>
                             </a>
                             <br>

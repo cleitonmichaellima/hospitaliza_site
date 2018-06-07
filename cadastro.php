@@ -9,9 +9,9 @@
             <img src="https://www.flaticon.com/premium-icon/icons/svg/310/310767.svg" style="width: 30%;">
             <h6>{{nomeMostra}}</h6>
             <hr>         
-            <li>Alterar Senha</li>
-            <li>Deletar Conta</li>
-            <li>Finalizar Sessão</li>
+            <a href="#!/instituicao/{{maisIndicada.id_instituicao}}"><li>Alterar Senha</li></a>
+            <a href="#!/desativar/"><li>Deletar Conta</li></a>
+           <li><button class='btn btn-warning btn-sm' data-toggle='modal' data-target='#modalFinalizarSessao'>Sair</button></li>
             
 	    </div>	   
 	    <div class='row col-sm-6 cardRanking ' style='margin-top:50px;padding:20px;'>

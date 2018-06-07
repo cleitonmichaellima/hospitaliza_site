@@ -26,6 +26,9 @@ hospitaliza.config(function($routeProvider) {
     .when("/duvidas/", {
         templateUrl : "../duvidas.php",       
     })
+    .when("/desativar/", {
+        templateUrl : "../desativar_conta.php",       
+    })
     .when("/usuario/:id_usuario", {
         resolve: {
 			check: function($location, loginService) {

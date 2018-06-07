@@ -58,4 +58,8 @@ var id_instituicao =  '';
          
     
  init()
+    
+ $scope.callInit = function (){
+     init();
+ }
 });
