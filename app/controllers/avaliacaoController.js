@@ -59,7 +59,8 @@ var id_instituicao =  '';
     
  init()
     
- $scope.callInit = function (){
-     init();
- }
+  $scope.$on("setLogado",  function(events) {
+     $scope.logado = loginService.getPassUser()
+  });
+    
 });

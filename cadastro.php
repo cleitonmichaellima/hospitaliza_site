@@ -4,16 +4,9 @@
 	</div>
 	<div class='row' ng-controller='usuarioController'>
 	    <div class='col-sm-2'></div>
-	    <div class='row col-sm-2 card' style='margin-top:50px;padding:20px;'>            
-            Seja bem-vindo 
-            <img src="https://www.flaticon.com/premium-icon/icons/svg/310/310767.svg" style="width: 30%;">
-            <h6>{{nomeMostra}}</h6>
-            <hr>         
-            <a href="#!/instituicao/{{maisIndicada.id_instituicao}}"><li>Alterar Senha</li></a>
-            <a href="#!/desativar/"><li>Deletar Conta</li></a>
-           <li><button class='btn btn-warning btn-sm' data-toggle='modal' data-target='#modalFinalizarSessao'>Sair</button></li>
-            
-	    </div>	   
+	   <?php
+            require 'subMenuUsuario.php';
+        ?>
 	    <div class='row col-sm-6 cardRanking ' style='margin-top:50px;padding:20px;'>
             <div class='col-sm-12'>
                 <h2>Dados Pessoais</h2>

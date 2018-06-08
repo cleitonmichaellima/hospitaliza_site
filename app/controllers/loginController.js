@@ -1,9 +1,12 @@
-hospitaliza.controller('loginController', function($location,loginService,$scope,usuarioService) {
+hospitaliza.controller('loginController', function($location,loginService,$scope,usuarioService,$rootScope) {
 
    $scope.logar = function (){
                 loginService.login($scope.login).then(function (response){ 
                     if (response.data.status=='1') {                                    
 				        loginService.saveData(response.data);
+                        
+                        $rootScope.$broadcast('setLogado');
+                        
                         $('#modalLogin').modal('hide');
 				        $location.path('/usuario/'+response.data.id_usuario);			
                     } else {

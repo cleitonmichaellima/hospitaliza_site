@@ -40,6 +40,11 @@
                    {{avaliacao.data}}<br>
                     {{avaliacao.descricao}}         
                </div>
+	      </div>
+	       <div class='col-sm-12' ng-if='!avaliacaoEncotrada'>	                 
+               <center>
+                   <img  style='width:20%' src='https://camo.githubusercontent.com/a1a81b0529517027d364ee8432cf9a8bd309542a/687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966'>
+               </center>
 	       </div>
 	       <div class='row col-sm-12' ng-if='avaliacaoEncotrada==1'>
 	           <h6> Não foram encontrados resultados para essa pesquisa</h6>
