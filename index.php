@@ -31,7 +31,7 @@
         <script src="app/controllers/instituicaoController.js"></script>
         <script src="app/controllers/navController.js"></script>
         <script src="app/controllers/contatoController.js"></script>
-
+        <script src="app/controllers/finalizarController.js"></script>
     </head>
 
 	<body ng-app="Hospitaliza">

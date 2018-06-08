@@ -229,7 +229,7 @@
 	</div>
 	
 	   <!-- Modal Finalizar Sessão -->
-	<div class="modal fade" id="modalFinalizarSessao"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="modalFinalizarSessao"   ng-controller='finalizarController' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -244,7 +244,7 @@
 				<div class="modal-footer">
 					<center>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-success" ng-click="finalizarSessao();" >Finalizar</button>
+						<button type="button" class="btn btn-success" data-dismiss="modal" ng-click="finalizarSessao();" >Finalizar</button>
 					</center>
 				</div>
 			</div>

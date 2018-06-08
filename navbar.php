@@ -5,7 +5,7 @@
     <span class="form-inline">			
         <input id="barraProcurarNav"  ng-model="novoTermo" type="text" class='form-control'>				
         <a href='#!/search/{{novoTermo}}'>
-            <button class='btn btn-primary btn-sm' id="btnProcurarNav" > Procurar </button>
+            <button class='btn btn-primary btn-sm' id="btnProcurarNav" ng-class="{'disabled': !novoTermo}"> Procurar </button>
         </a>	
     </span>
     <span class="form-inline" ng-if='!usuarioLogado'>

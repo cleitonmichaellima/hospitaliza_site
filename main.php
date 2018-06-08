@@ -18,7 +18,7 @@
 				</div>
 				<div class='col col-sm-2'>
 				    <a href='#!/search/{{novoTermo}}'>
-					<button class='btn btn-primary btn-lg' id="btnProcurarInicial"> Procurar </button>
+					<button class='btn btn-primary btn-lg' id="btnProcurarInicial" ng-class="{'disabled': !novoTermo}"> Procurar </button>
                     </a>
 				</div>
 				<div class='col col-sm-2'>

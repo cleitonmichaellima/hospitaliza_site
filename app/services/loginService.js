@@ -19,7 +19,7 @@ hospitaliza.factory('loginService', function($http) {
 	var _getName = function() {
 		return nomeUsuario;
 	};
-
+ 
 	var _getIdUsuario = function() {
 		return id_usuario;
 	};
@@ -56,21 +56,24 @@ hospitaliza.factory('loginService', function($http) {
             
 	};
 
-	var _clearData = function() {
-		localStorage.removeItem('login');
+	var _finalizar = function() {		
 		username = "";
 		id = "";
-		loggedin = false;
+		loggedin = false;   
+        status = true;
+        localStorage.removeItem('login')
+        return status;
+       
 	}
     
     return {
         login : _login,
         saveData : _saveData,
-        clearData : _clearData,
         isUserLoggedIn : _isUserLoggedIn,
         getName : _getName,
         getIdUsuario : _getIdUsuario,
-        getPassUser : _getPassUser
+        getPassUser : _getPassUser,
+        finalizar : _finalizar
 
     }
 
