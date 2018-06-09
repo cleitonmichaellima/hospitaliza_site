@@ -9,17 +9,17 @@
 	      Hospital Santa Casa
 	      Hospital Santo Antonio	      
 	    </div>
-	    <div class='row col-sm-5' >
+	    <div class='row col-sm-6' >
 	       <div class='col-sm-12 card' style='padding: 50px;height:200px;'>
 	           Você pesquisou pelo termo:
 	           <h3>{{termoMostrar}} </h3>	           
 	       </div>
 	       <div class='row col-sm-12' ng-if='avaliacaoEncotrada.length>0'>
-	           <div class='row col-sm-12' style="margin-top:20px;">	               
-	               <div class='col-sm-3'>Filtre por: Todos</div>
-	               <div class='col-sm-3'>Avaliação Positiva</div>
-                   <div class='col-sm-3'>Avaliação Negativa</div>
-                   <div class='col-sm-3'>Indicação</div>                   
+	           <div class='row col-sm-12' style="margin-top:20px;font-size:13px;">	               
+	               <div class='col-sm-3' ng-click="showTodos()" >Filtre por: Todos ({{avaliacaoTodosResultados.length}}) </div>
+	               <div class='col-sm-3' ng-click="showPositivas()">Avaliação Positiva ({{avaliacaoPositiva.length}})</div>
+                   <div class='col-sm-3' ng-click="showNegativas()" >Avaliação Negativa ({{avaliacaoNegativa.length}})</div>
+                   <div class='col-sm-3' ng-click="showIndicacao()" >Indicação ({{avaliacaoIndicacao.length}})</div>                   
 	           </div>	         
                 <div class='col-sm-12 card cardRanking'  ng-repeat="avaliacao in avaliacaoEncotrada" style='padding: 15px;margin-top:10px;'>   
                     <div style='display:inline;'>
@@ -50,23 +50,5 @@
 	           <h6> Não foram encontrados resultados para essa pesquisa</h6>
 	       </div>
 	    </div>
-	    <div class='col-sm-2 card' style='padding: 50px !important;padding:20px;'>
-	      <h4> Melhores Avaliadas</h4>
-	      <div>
-            <span class="fa fa-star checkedStar"></span>
-            <span class="fa fa-star checkedStar"></span>
-            <span class="fa fa-star checkedStar"></span>
-            <span class="fa fa-star checkedStar"></span>
-          </div>
-	      <h5> Hospital Santa Casa</h5>
-	      <div>
-            <span class="fa fa-star checkedStar"></span>
-            <span class="fa fa-star checkedStar"></span>
-            <span class="fa fa-star checkedStar"></span>
-            <span class="fa fa-star checkedStar"></span>
-            <span class="fa fa-star"></span>
-          </div>
-	      <h5>Hospital Santo Antonio</h5>      
-	    </div>
-	    <div class='col-sm-2'></div>
+	   <div class='col-sm-2'></div>
 	</div>        

@@ -1,4 +1,4 @@
-hospitaliza.controller('avaliacaoController', function($scope,avaliacaoService,$routeParams,$rootScope,loginService) {
+hospitaliza.controller('avaliacaoController', function($scope,avaliacaoService,$routeParams,$rootScope,loginService,instituicaoService) {
 var id_instituicao =  ''; 
     
  $scope.$on("setIdInstituicao",  function(events,idInstituicao) {          
@@ -29,7 +29,16 @@ var id_instituicao =  '';
             $scope.avaliacao.titulo = response.data.titulo;
             $scope.avaliacao.descricao = response.data.descricao; 
             $scope.avaliacao.id_instituicao = response.data.id_instituicao; 
+            
+            instituicaoService.getDadosInstituicao(response.data.id_instituicao).then(function (response){
+                $scope.instituicaoAvaliacao = response.data
+                instituicaoService.getDadosVariavesInstituicao($scope.avaliacao.id_instituicao).then(function (response){
+                    $scope.variaveisInstituicao = response.data                
+                });
+            });
+            
             $scope.avaliacao.nota = response.data.nota;
+            
             
 		});
  }
@@ -61,6 +70,10 @@ var id_instituicao =  '';
     
   $scope.$on("setLogado",  function(events) {
      $scope.logado = loginService.getPassUser()
+  });
+    
+  $scope.$on("setUnlogedAvaliacao",  function(events) {
+     $scope.logado = '';
   });
     
 });

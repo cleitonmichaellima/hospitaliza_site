@@ -20,11 +20,41 @@ hospitaliza.controller('instituicaoController', function($scope,instituicaoServi
     var carregarInstituicaoPorTermo = function (){    
             $scope.termoMostrar =  $routeParams.termo;
             instituicaoService.getInstituicaoPorTermo($routeParams.termo).then(function (response){ 
-            $scope.avaliacaoEncotrada = response.data 
-                
+                $scope.avaliacaoEncotrada = response.data 
+                $scope.avaliacaoTodosResultados = response.data 
+                $scope.avaliacaoPositiva = []
+                $scope.avaliacaoNegativa = []
+                $scope.avaliacaoIndicacao = []
+
+                angular.forEach($scope.avaliacaoEncotrada, function(value, key) {
+                    if(value.nota>=3){
+                       $scope.avaliacaoPositiva.push(value);
+                    }
+                    if(value.nota<3){
+                       $scope.avaliacaoNegativa.push(value);
+                    }
+                     if(value.indicacao==1){
+                       $scope.avaliacaoIndicacao.push(value);
+                    }
+                });            
             });
      }
 
+  $scope.showPositivas = function(){
+      $scope.avaliacaoEncotrada = $scope.avaliacaoPositiva;
+  }
+  
+  $scope.showNegativas = function(){
+      $scope.avaliacaoEncotrada = $scope.avaliacaoNegativa;
+  }
+  
+  $scope.showIndicacao = function(){
+      $scope.avaliacaoEncotrada = $scope.avaliacaoIndicacao;
+  }
+  
+  $scope.showTodos = function(){
+      $scope.avaliacaoEncotrada = $scope.avaliacaoTodosResultados;
+  }
   
   $scope.atualizarVisualizacoes = function (){
       

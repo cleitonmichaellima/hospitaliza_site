@@ -1,4 +1,4 @@
-hospitaliza.controller('navController', function($scope,loginService) {      
+hospitaliza.controller('navController', function($scope,loginService,$rootScope) {      
     
     
 
@@ -9,4 +9,8 @@ hospitaliza.controller('navController', function($scope,loginService) {
         $scope.nomeUsuario = loginService.getName();
     }
     init();
+    
+    $scope.$on("setUnlogedNav",  function(events) {
+        $scope.usuarioLogado = ''
+    });
 });
