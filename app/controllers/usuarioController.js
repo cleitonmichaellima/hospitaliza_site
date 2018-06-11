@@ -30,7 +30,7 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
                   // novo cadastro
                   usuarioService.getInsereUsuario($scope.newUser).then(function (response){       			
                       // sucesso cadastro
-                      window.location.href = 'http://hospitaliza.cleitonlima.com.br/#!/usuario/'+response.data.id_usuario);	
+                      window.location.href = 'http://hospitaliza.cleitonlima.com.br/#!/usuario/'+response.data.id_usuario;	
                       if(response.data.status==1){
                         var login = {
                                      email: $scope.newUser.email,
