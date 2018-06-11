@@ -30,6 +30,16 @@ hospitaliza.factory('usuarioService', function($http) {
                             });
     }
     
+    var _getDesativarUsuario =  function (id_usuario){
+        return request = $http({
+                                method: "post",
+                                url: "http://cleitonlima.com.br/slim/usuario.php/desativarUsuario/",
+                                data: { 
+                                        id_usuario : id_usuario
+                                      }                               
+                            });
+    }
+    
     var _getAtualizarDadosUsuario = function(user){
         return request = $http({
                                 method: "post",
@@ -45,12 +55,27 @@ hospitaliza.factory('usuarioService', function($http) {
                                       }                              
                             });
     }
+    
+    var _getlembrarSenha = function(email){
+        return request = $http({
+                                method: "post",
+                                url: "http://cleitonlima.com.br/slim/usuario.php/lembrarSenha/",
+                                data: { 
+                                        email: email                               
+                                        
+                                      }                              
+                            });
+    }
+        
+    
 
     return {
         getInsereUsuario : _getInsereUsuario,
         getDadosUsuario : _getDadosUsuario,
         getAtualizarDadosUsuario : _getAtualizarDadosUsuario,
         getVerificarSeEmailJaCadastrado : _getVerificarSeEmailJaCadastrado,
-        getAvaliacaoUsuario : _getAvaliacaoUsuario
+        getAvaliacaoUsuario : _getAvaliacaoUsuario,
+        getDesativarUsuario : _getDesativarUsuario,
+        getlembrarSenha : _getlembrarSenha
     }
 });

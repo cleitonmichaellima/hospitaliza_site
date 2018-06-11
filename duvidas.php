@@ -8,84 +8,155 @@
             <ul>          
                 <li>Como se cadastrar </li>
                 <li>Como acessar</li>
+                <li>Como pesquisar uma instituição</li>
                 <li>Como fazer avaliação</li>
+                <li>Quero desativar minha conta</li>
                 <li>Quero recuperar minha senha</li>
+                <li>Como é calculada a média da instituição</li>
+                <li>O que significa uma avaliação positiva</li>
+                <li>O que significa uma avaliação negativa</li>
+                <li>O que significa uma indicação</li>
             </ul>  
 	    </div>	   
 	    <div class='row col-sm-6 cardRanking ' style='margin-top:50px;padding:20px;'>
             <div class='col-sm-12'>
-                <h2 id="comoCadastrar">Como se cadastrar</h2>
+                <h2 id="comoCadastrar" style='margin-top:25px;'>Como se cadastrar</h2>
             </div>            
             <div class='row col-sm-12'>
-               <div class='col-sm-1'></div>
+               
                 <div class='col-sm-10'>
-                    Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+                   Para efetuar cadastro no site, o usuário deve clicar no botão "cadastre-se" na parte superior do lado direito.<br>
+	               <img botao Cadastre-se><br>
+	               Para concluir o cadastro no portal, é obrigatório o preenchimento de todos os campos.<br>
+	               <hr>
                 </div>
-                <div class='col-sm-1'></div>
+                
 	       </div>
+            <hr>
            <div class='col-sm-12'>
-                <h2 id="comoAcessar">Como acessar</h2>
+                <h2 id="comoAcessar" style='margin-top:25px;'>Como acessar</h2>
             </div>            
             <div class='row col-sm-12'>
-               <div class='col-sm-1'></div>
+               
                 <div class='col-sm-10'>
-                    Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+                     Para efetuar o login no site, o usuário deve clicar no botão "entrar" na parte superior do lado direito<br>
+	                <img botao entrar>
+	                <hr>
                 </div>
-                <div class='col-sm-1'></div>
+                
 	       </div> 
+	       <hr>
 	       <div class='col-sm-12'>
-                <h2 id="comoFazerAvaliacao" >Como fazer avaliação</h2>
+                <h2 id="comoPesquisar" style='margin-top:25px;'>Como pesquisar uma instituição</h2>
             </div>            
             <div class='row col-sm-12'>
-               <div class='col-sm-1'></div>
-                <div class='col-sm-10'>                    
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam imperdiet turpis a quam cursus elementum.
-                    Integer hendrerit nunc interdum eros tempus, non luctus dolor feugiat.
-                    Etiam ultrices risus in eros tincidunt rutrum.
-                    Morbi ultricies nisl in fermentum pharetra.
-                    Fusce posuere justo et maximus mattis.
-
-                    Nulla at eros id felis faucibus scelerisque nec at elit.
-                    Suspendisse sed nisl sit amet tortor rutrum elementum eget vel ex.
-                    In eu velit sed mauris ultricies ultrices eget placerat elit.
-                    Pellentesque dignissim orci eget dui eleifend, non volutpat justo sodales.
-
-                    Phasellus in nisi id massa facilisis maximus eget sed lorem.
-                    Curabitur consequat sapien interdum ipsum molestie, dapibus mattis dui luctus.
-                    Phasellus ut nisl vel purus dignissim semper.
-
-                    Nunc vel diam a elit mattis facilisis vitae id ante.
-
-                    Nam vitae felis vel nulla finibus pellentesque a sed risus.
-                    Duis id orci sit amet tellus dictum auctor.
-                    Aliquam porttitor metus eu pulvinar tempor.
-                    Morbi vel massa sagittis, interdum eros id, pharetra metus.
-
+               
+                <div class='col-sm-10'>
+                     Para pesquisar por uma avaliação ou instituição, utilize a barra de pesquisa na parte superior do portal.<br>
+                      <img barra superior>
+                      <hr>
                 </div>
-                <div class='col-sm-1'></div>
-	       </div>          
+                
+	       </div> 
+	       <hr>
 	       <div class='col-sm-12'>
-                <h2 id="comoRecuperarSenha">Quero recuperar minha senha</h2>
+                <h2 id="comoFazerAvaliacao" style='margin-top:25px;'>Como fazer avaliação</h2>
             </div>            
             <div class='row col-sm-12'>
-               <div class='col-sm-1'></div>
-                <div class='col-sm-10'>                    
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam imperdiet turpis a quam cursus elementum.
-                    Integer hendrerit nunc interdum eros tempus, non luctus dolor feugiat.
-                    Etiam ultrices risus in eros tincidunt rutrum.
-                    Morbi ultricies nisl in fermentum pharetra.
-                    Fusce posuere justo et maximus mattis.
-
-                    Nulla at eros id felis faucibus scelerisque nec at elit.
-                    Suspendisse sed nisl sit amet tortor rutrum elementum eget vel ex.
-                    In eu velit sed mauris ultricies ultrices eget placerat elit.
-                    Pellentesque dignissim orci eget dui eleifend, non volutpat justo sodales.
-                    
+               
+                <div class='col-sm-10'>  
+                     Para avaliar uma instituição, você deve entrar no cadastro da instituição com o login já efetuado.<br>
+                      <img area instituicao><br>
+                      Ao clicar no botão de avaliar, você deve preencher todos os campos solicitados. <br>
+                      <img avaliar><br>
+                      Ao clicar em confirmar a sua avaliação será registrada.
+                      <hr>
                 </div>
-                <div class='col-sm-1'></div>
-	       </div>          
+                
+	       </div>   
+	             
+	       <div class='col-sm-12'>
+                <h2 id="comoDesativarConta" style='margin-top:25px;'>Quero desativar minha conta</h2>
+            </div>            
+            <div class='row col-sm-12'>
+               
+                <div class='col-sm-10'>                    
+                    Para desativar a sua conta, você deve entrar na área designada para isso, clicando no menu lateral esquerdo em seu cadastro.<br>
+                   <img menuLateral> <br>
+                   Para efetuar o cancelamento da conta, apenas escolha o motivo que mais se adequa a situação atual e cliquei em "Desativar"  
+                  <hr style='margin-top:20px;'>                 
+                </div>
+                
+	       </div> 
+	       <hr>
+	        <div class='col-sm-12'>
+                <h2 id="comoRecuperarSenha" style='margin-top:25px;'> Como lembrar a minha senha </h2>
+            </div>  
+	        <div class='row col-sm-12'>
+               
+                <div class='col-sm-10'>                    
+                  Caso tenha dificuldades no acesso ao portal, você pode solicitar a alteração de senha na ferramenta de  <a data-toggle='modal' data-target='#modalLembrarSenha' data-dismiss='modal'>lembrar senhal </a>.
+                  <hr style='margin-top:20px;'>
+                </div>
+                
+	       </div>  
+	       <hr>
+	        <div class='col-sm-12'>
+                <h2 id="comoCalculaMedia" style='margin-top:25px;'>Como é calculada a média da instituição</h2>
+            </div>  
+	        <div class='row col-sm-12'>
+               
+                <div class='col-sm-10'>                    
+                    A média da instituição é calculada da seguinte forma
+                    <center>                        
+                        <h4>SOMA(TODAS AS NOTAS )/(Quantidade de AVALIAÇÂO)</h4>
+                    </center> 
+                    EXEMPLO:<br>
+                    2 avaliações SENDO 3 5 suas notas respectivamente<br>
+                    SOMA: 3+5/2 = 4
+                    <hr>
+                </div>
+                
+	       </div>  
+             <div class='col-sm-12'>
+                <h2 id="oQueAvaliacaoPositiva">O que significa uma avaliação positiva</h2>
+            </div>           
+             <div class='row col-sm-12'>
+               
+                <div class='col-sm-10'>                    
+                   Avaliações positivas são consideradas com nota 3 ou superior.                   
+                  <hr style='margin-top:20px;'>
+                </div>
+                
+	       </div> 
+	       <hr>
+	        <div class='col-sm-12'>
+                <h2 id="oQueAvaliacaoNegativa" style='margin-top:25px;'> O que significa uma avaliação negativa</h2>
+            </div>   
+	        <div class='row col-sm-12'>
+               
+                <div class='col-sm-10'>                    
+                    Avaliações negativas são consideradas quando a nota é inferior a 3. 
+                   <hr style='margin-top:20px;'>           
+                </div>
+                
+	       </div> 
+	       
+	        <div class='col-sm-12'>
+                <h2 id="oQueIndicacao" style='margin-top:25px;'>O que significa uma indicação</h2>
+            </div>  
+	        <div class='row col-sm-12'>
+               
+                <div class='col-sm-10'>                    
+                    Uma indicação signficia que um usuário ao frequentar aquela instituição, sentiu-se em um estado de atendimento suficiente para indicar para visitantes futuros.          
+                    <hr>
+                </div>
+                
+	       </div>  
+	       
 	    </div>	     
 	    <div class='col-sm-2'></div>
-	</div>        
+	</div>    
+	
+	  
+    

@@ -10,7 +10,7 @@ hospitaliza.controller('loginController', function($location,loginService,$scope
                         $('#modalLogin').modal('hide');
 				        $location.path('/usuario/'+response.data.id_usuario);			
                     } else {
-                        $scope.msgError='E-mail ou senha incorretos';                                    
+                        $scope.msgError='E-mail ou senha incorretos, se esqueceu sua senha';                                    
                     }  
                 });
    }

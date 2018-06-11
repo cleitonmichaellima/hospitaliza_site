@@ -45,9 +45,22 @@
                                       </h5>
                                     </div>
 
-                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                                      <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style='text-align:justify;height: 400px;overflow:auto'>
+                                      <div class="card-body" >
+                                          <center>TERMO DE USO DO PORTAL HOSPITALIZA</center>
+                                          <br>
+                                        O   presente   contrato   ("Termo   de   Uso")  estabelece  os   termos   e condições que regem a utilização por você, usuário do portal de
+                                        Internet   denominado  HOSPITALIZA,   registrado   e funcionando   no   nome   de   domínio   "hospitaliza.cleitonlima.com.br", propriedade de CLEITON MICHAEL LIMA, SOB O CPF ###.###.###-##.
+                                        <br>
+                                        Este Termo de Uso rege a responsabilidade do usuário para com as informações concedidas pelo mesmo dentro do PORTAL.
+                                        Do Cadastramento.É possível efetuar pelo site, através da área designada para tal,sendo obrigatório o preenchimento de informações legítimas e de
+                                        responsabilidade do USUÁRIO.
+                                        <br>
+                                        Da Avaliação.É possível efetuar pelo site, através da área designada para tal, onde o ("USUÁRIO") tem total poder de escolha sobre a INSTITUIÇÂO que deseja avaliar, sendo que 
+                                        a mesma esteja cadastrada no PORTAL HOSPITALIZA. O compromentimento da veracidade e integridade das informações ali ditas, devem ser de total responsabilidade do USUÁRIO, que esteja
+                                        ciente que qualquer necessidade de atestação legal, o mesmo responderá por tal informação, por fim o PORTAL HOSPITAL se isenta de qualquer efeito ou responsabilidade de tal.
+                                        <br>
+                                        Do Cancelamento. É possível solicitar o cancelamento do cadastro na área designada para tal.
                                       </div>
                                     </div>
                                   </div>
@@ -101,8 +114,10 @@
 						</div>
 						<div class='col col-sm-6'>
 						</div>	
-						<div class='col col-sm-12' style='text-alig:center;'>						    
-						    <font ng-bind='msgError' style='color:red;font-size:15px;'></font>
+						<div class='col col-sm-1'>
+						</div>	
+						<div class='col col-sm-10' style='text-alig:center;' ng-if="msgError">						    
+						    <font ng-bind='msgError' style='color:red;font-size:15px;'></font> <a data-toggle='modal' data-target='#modalLembrarSenha' style='cursor:pointer;' data-dismiss='modal'>clique aqui</a>
 						</div>						
 					</div>         
 				</div>
@@ -273,6 +288,37 @@
 					<center>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 						<button type="button" class="btn btn-success" data-dismiss="modal" ng-click="finalizarSessao();" >Finalizar</button>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	   <!-- Modal lembrar senha -->
+	<div class="modal fade" id="modalLembrarSenha"   ng-controller='lembrarSenhaController' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">lembrar senha</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+				    <div class='row'>
+                        <div class='col col-sm-1'></div>
+                        <div class='col col-sm-10'>
+                            <label> E-mail:</label>
+                            <input type='text' class='form-control' ng-model='email'>
+                        </div>
+                        <div class='col col-sm-1'></div>
+                    </div>
+				</div>
+				<div class="modal-footer">
+					<center>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-success" data-dismiss="modal" ng-click="lembrarSenha();" >enviar</button>
 					</center>
 				</div>
 			</div>

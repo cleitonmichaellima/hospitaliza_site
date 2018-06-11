@@ -1,4 +1,4 @@
-hospitaliza.controller('usuarioController', function($scope,usuarioService,$routeParams,loginService,$location) {      
+hospitaliza.controller('usuarioController', function($scope,usuarioService,$routeParams,loginService,$location,$rootScope,loginService) {      
      
      var carregarDadosUsuario = function (){       
 		usuarioService.getDadosUsuario($routeParams.id_usuario).then(function (response){ 
@@ -30,9 +30,22 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
                   // novo cadastro
                   usuarioService.getInsereUsuario($scope.newUser).then(function (response){       			
                       // sucesso cadastro
+                      window.location.href = 'http://hospitaliza.cleitonlima.com.br/#!/usuario/'+response.data.id_usuario);	
                       if(response.data.status==1){
+                        var login = {
+                                     email: $scope.newUser.email,
+                                     senha: $scope.newUser.senha
+                                    }  
+                        
+                        loginService.login(login).then(function (response){ 
+                            loginService.saveData(response.data);                        
+                            $rootScope.$broadcast('setLogado');    
+                            
+                        });
+                          
                         $('#modalCadastre').modal('hide');
-				        $location.path('/usuario/'+response.data.id_usuario);	
+				        
+                          
                       }
                       else{
                            $scope.msgCadastro = 'Erro ao efetuar cadastro, tente mais tarde';
@@ -59,9 +72,31 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
           if(response.data.status==1){
               $scope.atualizaStatus = 'success';
               $scope.msgAtualizaCadastro = 'Cadastro atualizado com sucesso';
+              $scope.msgAtualizaCadastro = 'Cadastro atualizado com sucesso';
            }
            else{
               $scope.msgAtualizaCadastro = 'Erro ao atualizar cadastro, tente mais tarde';
+              $scope.atualizaStatus = 'danger'; 
+          }
+      })
+  }
+    
+  
+  $scope.desativarUsuario = function (){
+      
+      usuarioService.getDesativarUsuario(loginService.getIdUsuario()).then(function (response){ 
+          
+          if(response.data.status==1){
+              $scope.atualizaStatus = 'warning';
+              $scope.msgAtualizaCadastro = 'Cadastro desativado com sucesso, você será rederecionado para a página principal';
+               $location.path('#!/');	
+               loginService.finalizar(loginService.getPassUser())               
+               window.location.href = 'http://hospitaliza.cleitonlima.com.br/'	
+               $rootScope.$broadcast('setUnlogedAvaliacao');
+               $rootScope.$broadcast('setUnlogedNav');
+           }
+           else{
+              $scope.msgAtualizaCadastro = 'Erro ao desativar cadastro, tente mais tarde';
               $scope.atualizaStatus = 'danger'; 
           }
       })
