@@ -67,6 +67,28 @@ hospitaliza.factory('usuarioService', function($http) {
                             });
     }
         
+    var _getVerificaChaveSenha = function (chave_unica){
+          return request = $http({
+                                method: "post",
+                                url: "http://cleitonlima.com.br/slim/usuario.php/verificaChaveSenha/",
+                                data: { 
+                                        chave_unica: chave_unica                               
+                                        
+                                      }                              
+                            });
+    }
+    
+     var _getAtualizaSenhaUsuario = function (alterarSenha){
+          return request = $http({
+                                method: "post",
+                                url: "http://cleitonlima.com.br/slim/usuario.php/alterarSenhaDoLembrar/",
+                                data: { 
+                                        senha: alterarSenha.senha,
+                                        id_usuario : alterarSenha.id_usuario
+                                        
+                                      }                              
+                            });
+    }
     
 
     return {
@@ -76,6 +98,8 @@ hospitaliza.factory('usuarioService', function($http) {
         getVerificarSeEmailJaCadastrado : _getVerificarSeEmailJaCadastrado,
         getAvaliacaoUsuario : _getAvaliacaoUsuario,
         getDesativarUsuario : _getDesativarUsuario,
-        getlembrarSenha : _getlembrarSenha
+        getlembrarSenha : _getlembrarSenha,
+        getVerificaChaveSenha : _getVerificaChaveSenha,
+        getAtualizaSenhaUsuario : _getAtualizaSenhaUsuario
     }
 });

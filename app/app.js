@@ -30,6 +30,10 @@ hospitaliza.config(function($routeProvider) {
         templateUrl : "../desativar_conta.php", 
         controller: "usuarioController"
     })
+     .when("/lembrarSenha/:chave_unica", {
+        templateUrl : "../lembrarSenha.php", 
+        controller: "lembrarSenhaController"
+    })
     .when("/usuario/:id_usuario", {
         resolve: {
 			check: function($location, loginService) {
