@@ -4,18 +4,18 @@
 	</div>
 	<div class='row'>
 	    <div class='col-sm-2'></div>
-	    <div class='row col-sm-2 card' style='margin-top:50px;padding:20px;'>  
-            <ul>          
-                <li>Como se cadastrar </li>
-                <li>Como acessar</li>
-                <li>Como pesquisar uma instituição</li>
-                <li>Como fazer avaliação</li>
-                <li>Quero desativar minha conta</li>
-                <li>Quero recuperar minha senha</li>
-                <li>Como é calculada a média da instituição</li>
-                <li>O que significa uma avaliação positiva</li>
-                <li>O que significa uma avaliação negativa</li>
-                <li>O que significa uma indicação</li>
+	    <div class='row col-sm-2 card' style='margin-top:50px;padding-top:20px;'>  
+            <ul style='margin-left: -30px;font-size: 13px;'>          
+                <a href='#comoCadastrar'><li>Como se cadastrar </li></a>
+                <a href='#comoAcessar'><li>Como acessar</li></a>
+                <a href='#comoPesquisar'><li>Como pesquisar uma instituição</li></a>
+                <a href='#comoFazerAvaliacao'><li>Como fazer avaliação</li></a>
+                <a href='#comoDesativarConta'><li>Quero desativar minha conta</li></a>
+                <a href='#comoRecuperarSenha'><li>Quero recuperar minha senha</li></a>
+                <a href='#comoCalculaMedia'><li>Como é calculada a média da instituição</li></a>
+                <a href='#oQueAvaliacaoPositiva'><li>O que significa uma avaliação positiva</li></a>
+                <a href='#oQueAvaliacaoNegativa'><li>O que significa uma avaliação negativa</li></a>
+                <a href='#oQueAvaliacaoIndicacao'><li>O que significa uma indicação</li></a>
             </ul>  
 	    </div>	   
 	    <div class='row col-sm-6 cardRanking ' style='margin-top:50px;padding:20px;'>
@@ -109,7 +109,7 @@
                 <div class='col-sm-10'>                    
                     A média da instituição é calculada da seguinte forma
                     <center>                        
-                        <h4>SOMA(TODAS AS NOTAS )/(Quantidade de AVALIAÇÂO)</h4>
+                        <h6 style='color:#1798a6; margin-top:15px;margin-bottom:15px;'>SOMA(TODAS AS NOTAS )/(Quantidade de AVALIAÇÂO)</h6>
                     </center> 
                     EXEMPLO:<br>
                     2 avaliações SENDO 3 5 suas notas respectivamente<br>

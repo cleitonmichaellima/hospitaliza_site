@@ -69,7 +69,7 @@
 						    <div class='col col-sm-1'></div>                        
 				            <div class='col col-sm-1'></div>
 						    <div class=' row col col-sm-10'>
-                               <input type='radio' ng-model="newUser.termosDeUso" value='1'> <label>Li, e concordo totalmente com os termos de uso acima</label>	                           		 
+                               <label> <input type='radio' ng-model="newUser.termosDeUso" value='1'> Li, e concordo totalmente com os termos de uso acima</label>	                           		 
 						    </div>
 						    <div class='col col-sm-1'></div>
 						</div>		
@@ -211,7 +211,7 @@
 				<div class="modal-footer">
 					<center>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-success"  ng-class="{ 'disabled': !novaAvaliacao.titulo || !novaAvaliacao.descricao || !novaAvaliacao.nota || !novaAvaliacao.indicacao || !termosDeUso }" data-dismiss="modal" ng-click="inserirAvaliacao()">Registrar Avaliação</button>
+						<button type="button" class="btn btn-success"  ng-class="{ 'disabled': !novaAvaliacao.titulo || !novaAvaliacao.descricao || !novaAvaliacao.nota || !novaAvaliacao.indicacao }" data-dismiss="modal" ng-click="inserirAvaliacao()">Registrar Avaliação</button>
 					</center>
 				</div>
 			</div>

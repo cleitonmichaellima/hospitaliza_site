@@ -6,8 +6,7 @@
             <h4> Institucional </h4>
             <a href='#!/sobre/#quemSomos'><li>Quem Somos </li></a>
             <a href='#!/sobre/#objetivos'><li>Objetivo </li></a>
-            <a href='#!/sobre/#termos'><li>Termos de Uso</li></a>
-            <a href='#!/sobre/#politicas'><li>Política de Privacidade</li></a>           
+            <a href='#!/sobre/#termos'><li>Termos de Uso</li></a>      
         </div>
         <div class='col-sm-3'>
             <h4> Dúvidas Frequentes </h4>
