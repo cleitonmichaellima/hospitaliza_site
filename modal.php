@@ -31,7 +31,35 @@
 							<label>Confirme a senha:</label>
 							<input type='password' ng-model='newUser.senhaConf' class='form-control'>
 						</div>
-						<div class='col col-sm-1'></div>	
+						<div class='col col-sm-1'></div>
+						<div class='row'>
+                            <div class='col col-sm-1'></div>
+						    <div class=' row col col-sm-10' style="margin-top:10px;">
+                                <div id="accordion">
+                                  <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                      <h5 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                          Termos de uso de usuário
+                                        </button>
+                                      </h5>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                      <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                      </div>
+                                    </div>
+                                  </div>
+                             </div>	 
+						    </div>
+						    <div class='col col-sm-1'></div>                        
+				            <div class='col col-sm-1'></div>
+						    <div class=' row col col-sm-10'>
+                               <input type='radio' ng-model="newUser.termosDeUso" value='1'> <label>Li, e concordo totalmente com os termos de uso acima</label>	                           		 
+						    </div>
+						    <div class='col col-sm-1'></div>
+						</div>		
 					</div>
                     <div class='row'>
 					    <div class='col col-sm-12' style='text-align:center;'>
@@ -42,7 +70,7 @@
 				<div class="modal-footer">
 					<center>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-success" ng-click="inserirUsuario()" ng-class="{ 'disabled': !newUser.nome ||!newUser.email ||!newUser.senha ||!newUser.senhaConf }">Efetuar Cadastro</button>
+						<button type="button" class="btn btn-success" ng-click="inserirUsuario()" ng-class="{ 'disabled': !newUser.nome ||!newUser.email ||!newUser.senha ||!newUser.senhaConf || !newUser.termosDeUso }">Efetuar Cadastro</button>
 					</center>
 				</div>
 			</div>
@@ -87,7 +115,7 @@
 			</div>
 		</div>
 	</div>
-	
+   	
     <!-- Modal AVALIAR-se -->
 	<div class="modal fade" id="modalAvaliar"   ng-controller="avaliacaoController" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
@@ -132,7 +160,7 @@
                                 <input type="radio" ng-model="novaAvaliacao.indicacao" value='0'> Não
                             </div>				 
 						</div>
-						<div class='col col-sm-1'></div>							
+						<div class='col col-sm-1'></div>											
 					</div> 
 					<div class='row' ng-if="!logado">
                         <div class='col-sm-1'></div>
@@ -168,7 +196,7 @@
 				<div class="modal-footer">
 					<center>
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-success"  ng-class="{ 'disabled': !novaAvaliacao.titulo || !novaAvaliacao.descricao || !novaAvaliacao.nota || !novaAvaliacao.indicacao }" data-dismiss="modal" ng-click="inserirAvaliacao()">Registrar Avaliação</button>
+						<button type="button" class="btn btn-success"  ng-class="{ 'disabled': !novaAvaliacao.titulo || !novaAvaliacao.descricao || !novaAvaliacao.nota || !novaAvaliacao.indicacao || !termosDeUso }" data-dismiss="modal" ng-click="inserirAvaliacao()">Registrar Avaliação</button>
 					</center>
 				</div>
 			</div>

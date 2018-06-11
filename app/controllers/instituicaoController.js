@@ -52,8 +52,20 @@ hospitaliza.controller('instituicaoController', function($scope,instituicaoServi
       $scope.avaliacaoEncotrada = $scope.avaliacaoIndicacao;
   }
   
-  $scope.showTodos = function(){
-      $scope.avaliacaoEncotrada = $scope.avaliacaoTodosResultados;
+  $scope.showPositivasInstituicao = function(){
+      $scope.avaliacoesInstituicao = $scope.avaliacaoPositivaInstituicao;
+  }
+  
+  $scope.showNegativasInstituicao = function(){
+      $scope.avaliacoesInstituicao = $scope.avaliacaoNegativaInstituicao;
+  }
+  
+  $scope.showIndicacaoInstituicao = function(){
+      $scope.avaliacoesInstituicao = $scope.avaliacaoIndicacaoInstituicao;
+  }
+  
+  $scope.showTodosInstituicao = function(){
+      $scope.avaliacoesInstituicao = $scope.avaliacaoTodosResultadosInstituicao;
   }
   
   $scope.atualizarVisualizacoes = function (){
@@ -66,6 +78,22 @@ hospitaliza.controller('instituicaoController', function($scope,instituicaoServi
   var carregarAvaliacaoInstituicao = function (){       
         instituicaoService.getAvaliacaoInstituicao($routeParams.id_instituicao).then(function (response){ 
                 $scope.avaliacoesInstituicao = response.data
+                $scope.avaliacaoTodosResultadosInstituicao = response.data 
+                $scope.avaliacaoPositivaInstituicao = []
+                $scope.avaliacaoNegativaInstituicao = []
+                $scope.avaliacaoIndicacaoInstituicao = []
+
+                angular.forEach($scope.avaliacoesInstituicao, function(value, key) {
+                    if(value.nota>=3){
+                       $scope.avaliacaoPositivaInstituicao.push(value);
+                    }
+                    if(value.nota<3){
+                       $scope.avaliacaoNegativaInstituicao.push(value);
+                    }
+                     if(value.indicacao==1){
+                       $scope.avaliacaoIndicacaoInstituicao.push(value);
+                    }
+                }); 
 
         });
    }

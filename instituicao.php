@@ -65,13 +65,41 @@
             <div class='row col-sm-12'>
                 <h4> Avaliações de Usuários</h4>
             </div>
-            <div class='row col-sm-12'>
-               <div class="row col-sm-12" ng-repeat="avaliacao in avaliacoesInstituicao">
-                   <div class='col-sm-12 card cardRanking' style='padding: 20px;margin-bottom: 5px;'>   
-                       <a href='#!/avaliacao/{{avaliacao.id_avaliacao}}'><h5>{{avaliacao.titulo}}</h5></a>  
-                       {{avaliacao.descricao}}   
-                   </div>                 
-              </div>             
+            <div class='row col-sm-12' style="margin-top:20px;font-size:13px;">	               
+	               <div class='col-sm-3' ng-click="showTodosInstituicao()" >
+	                   Filtre por: 
+	                   <button class='btn btn-outline-primary btn-sm'>  Todos ({{avaliacaoTodosResultadosInstituicao.length}})</button>
+	               </div>
+	               <div class='col-sm-3' ng-click="showPositivasInstituicao()">
+                      <button class='btn btn-outline-primary btn-sm'>Avaliação Positiva ({{avaliacaoPositivaInstituicao.length}})</button>
+                   </div>
+                   <div class='col-sm-3' ng-click="showNegativasInstituicao()" >
+                       <button class='btn btn-outline-primary btn-sm'>Avaliação Negativa ({{avaliacaoNegativaInstituicao.length}})</button>
+                   </div>
+                   <div class='col-sm-3' ng-click="showIndicacaoInstituicao()" >
+                       <button class='btn btn-outline-primary btn-sm'>Indicação ({{avaliacaoIndicacaoInstituicao.length}})</button>
+                   </div>                   
+	           </div>	
+            <div class='row col-sm-12'>              
+              <div class='col-sm-12 card cardRanking'  ng-repeat="avaliacao in avaliacoesInstituicao" style='padding: 15px;margin-top:10px;'>   
+                    <div style='display:inline;'>
+                        <span class="fa fa-star checkedStar"></span>
+                        <span class="fa fa-star" ng-class="{ 'checkedStar': avaliacao.nota>=2  }"></span>
+                        <span class="fa fa-star" ng-class="{ 'checkedStar': avaliacao.nota>=3 }"></span>
+                        <span class="fa fa-star" ng-class="{ 'checkedStar': avaliacao.nota>=4 }"></span>
+                        <span class="fa fa-star" ng-class="{ 'checkedStar': avaliacao.nota>=5 }" ></span>
+                    </div>
+                    <h5 style='display:inline;'>
+                      <a href='#!/avaliacao/{{avaliacao.id_avaliacao}}'>
+                       {{avaliacao.titulo}}
+                      </a>
+                     </h5> 
+                   <a href='#!/instituicao/{{avaliacao.id_instituicao}}'>
+                       <i>{{avaliacao.nome}}</i>
+                    </a>
+                   {{avaliacao.data}}<br>
+                    {{avaliacao.descricao}}         
+               </div>                         
             </div>           
         </div>
          <div class='col-sm-2'></div>         

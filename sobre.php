@@ -3,16 +3,9 @@
 		<?php  require "navbar.php" ?>
 	</div>
 	<div class='row' >
-	    <div class='col-sm-2'></div>
-	    <div class='row col-sm-2 card' style='margin-top:50px;padding:20px;'>  
-            <ul>               
-                <li>Quem Somos </li>
-                <li>Objetivo</li>
-                <li>Termos de Uso</li>
-                <li>Políticas de Privacidade</li>
-            </ul>  
-	    </div>	   
-	    <div class='row col-sm-6 cardRanking ' style='margin-top:50px;padding:20px;'>
+	    <div class='col-sm-3'></div>
+	   
+	    <div class='row col-sm-7 cardRanking ' style='margin-top:50px;padding:20px;'>
             <div class='col-sm-12'>
                 <h2 id="quemSomos">Quem Somos</h2>
             </div>            

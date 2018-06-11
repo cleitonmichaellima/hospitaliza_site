@@ -40,7 +40,7 @@
                   <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <h6>{{variaveisInstituicao.totalIndicam }}</h6>
-            </div>           
+            </div>         
             <div  style="margin-top: 20px;">
               <button style="margin: auto;" class="btn btn-outline-success " data-target="#modalAvaliar" data-toggle="modal"> Avaliar Instituição </button>
             </div>

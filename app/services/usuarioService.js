@@ -23,7 +23,8 @@ hospitaliza.factory('usuarioService', function($http) {
                                 url: url,
                                 data: { nome:newUser.nome,
                                         email:newUser.email,
-                                        senha:newUser.senha
+                                        senha:newUser.senha,
+                                        assinou_termo:newUser.termosDeUso
                                       }
                                
                             });
