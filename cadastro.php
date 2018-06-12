@@ -78,13 +78,7 @@
             <div class='col-sm-12' style='margin-top:60px;'>
                 <h2>Suas Avaliações</h2>
             </div>
-            <div class='row col-sm-12'>
-	           <div class='row col-sm-12' style="margin-top:20px;">	               
-	               <div class='col-sm-3'>Filtre por: Todos</div>
-	               <div class='col-sm-3'>Avaliação Positiva</div>
-                   <div class='col-sm-3'>Avaliação Negativa</div>
-                   <div class='col-sm-3'>Data</div>                   
-	           </div>
+            <div class='row col-sm-12'>	           
 	           <div ng-if="avaliacoesUsuario" class='col-sm-12 card cardRanking' ng-repeat="avaliacao in avaliacoesUsuario" style='padding: 15px;margin-top:20px;'>   
                    <div style='display:inline;'>
                         <span class="fa fa-star checkedStar"></span>

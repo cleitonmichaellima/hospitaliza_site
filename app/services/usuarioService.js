@@ -30,12 +30,13 @@ hospitaliza.factory('usuarioService', function($http) {
                             });
     }
     
-    var _getDesativarUsuario =  function (id_usuario){
+    var _getDesativarUsuario =  function (desativar){
         return request = $http({
                                 method: "post",
                                 url: "http://cleitonlima.com.br/slim/usuario.php/desativarUsuario/",
                                 data: { 
-                                        id_usuario : id_usuario
+                                        id_usuario : desativar.id_usuario,
+                                        motivo : desativar.motivo
                                       }                               
                             });
     }

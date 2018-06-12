@@ -32,28 +32,28 @@
                     <div class='col-sm-3'>
                        <h5>Total de Avaliações</h5>
                        <div class="progress" style="height: 5px;width: 80%;">
-                          <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          <div class="progress-bar bg-default" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                        </div>
                        <h6>{{instituicao.totalAvaliacao}}</h6>
                     </div> 
                     <div class='col-sm-3'>
                        <h5>Avaliações Positivas</h5>
                        <div class="progress" style="height: 5px;width: 80%;">
-                          <div class="progress-bar bg-info" role="progressbar" style="width:100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                          <div class="progress-bar bg-success" role="progressbar" style="width:100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                        </div>
                        <h6>{{instituicao.totalPositiva}}</h6>
                     </div> 
                     <div class='col-sm-3'>
                        <h5>Avaliações Negativas</h5>
                        <div class="progress" style="height: 5px;width: 80%;">
-                          <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                          <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                        </div>
                        <h6>{{instituicao.totalNegativa}}</h6>
                     </div> 
                     <div class='col-sm-3'>
                         <h5>Indicaram o lugar</h5>
                         <div class="progress" style="height: 5px;width: 80%;">
-                          <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <h6>{{instituicao.totalIndicam }}</h6>
                     </div>                 

@@ -6,16 +6,16 @@
 	    <div class='col-sm-2'></div>
 	    <div class='row col-sm-2 card' style='margin-top:50px;padding-top:20px;'>  
             <ul style='margin-left: -30px;font-size: 13px;'>          
-                <a href='#comoCadastrar'><li>Como se cadastrar </li></a>
-                <a href='#comoAcessar'><li>Como acessar</li></a>
-                <a href='#comoPesquisar'><li>Como pesquisar uma instituição</li></a>
-                <a href='#comoFazerAvaliacao'><li>Como fazer avaliação</li></a>
-                <a href='#comoDesativarConta'><li>Quero desativar minha conta</li></a>
-                <a href='#comoRecuperarSenha'><li>Quero recuperar minha senha</li></a>
-                <a href='#comoCalculaMedia'><li>Como é calculada a média da instituição</li></a>
-                <a href='#oQueAvaliacaoPositiva'><li>O que significa uma avaliação positiva</li></a>
-                <a href='#oQueAvaliacaoNegativa'><li>O que significa uma avaliação negativa</li></a>
-                <a href='#oQueAvaliacaoIndicacao'><li>O que significa uma indicação</li></a>
+                <a href='#!/duvidas/#comoCadastrar'><li>Como se cadastrar </li></a>
+                <a href='#!/duvidas/#comoAcessar'><li>Como acessar</li></a>
+                <a href='#!/duvidas/#comoPesquisar'><li>Como pesquisar uma instituição</li></a>
+                <a href='#!/duvidas/#comoFazerAvaliacao'><li>Como fazer avaliação</li></a>
+                <a href='#!/duvidas/#comoDesativarConta'><li>Quero desativar minha conta</li></a>
+                <a href='#!/duvidas/#comoRecuperarSenha'><li>Quero recuperar minha senha</li></a>
+                <a href='#!/duvidas/#comoCalculaMedia'><li>Como é calculada a média da instituição</li></a>
+                <a href='#!/duvidas/#oQueAvaliacaoPositiva'><li>O que significa uma avaliação positiva</li></a>
+                <a href='#!/duvidas/#oQueAvaliacaoNegativa'><li>O que significa uma avaliação negativa</li></a>
+                <a href='#!/duvidas/#oQueAvaliacaoIndicacao'><li>O que significa uma indicação</li></a>
             </ul>  
 	    </div>	   
 	    <div class='row col-sm-6 cardRanking ' style='margin-top:50px;padding:20px;'>

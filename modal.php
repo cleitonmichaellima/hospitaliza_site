@@ -117,7 +117,7 @@
 						<div class='col col-sm-1'>
 						</div>	
 						<div class='col col-sm-10' style='text-alig:center;' ng-if="msgError">						    
-						    <font ng-bind='msgError' style='color:red;font-size:15px;'></font> <a data-toggle='modal' data-target='#modalLembrarSenha' style='cursor:pointer;' data-dismiss='modal'>clique aqui</a>
+						    <font ng-bind='msgError' style='color:red;font-size:15px;'></font> <a ng-if="ErrorLogin==1" data-toggle='modal' data-target='#modalLembrarSenha' style='cursor:pointer;' data-dismiss='modal'>clique aqui</a>
 						</div>						
 					</div>         
 				</div>

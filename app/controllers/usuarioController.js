@@ -30,8 +30,9 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
                   // novo cadastro
                   usuarioService.getInsereUsuario($scope.newUser).then(function (response){       			
                       // sucesso cadastro
-                      window.location.href = 'http://hospitaliza.cleitonlima.com.br/#!/usuario/'+response.data.id_usuario;	
+                     
                       if(response.data.status==1){
+                        
                         var login = {
                                      email: $scope.newUser.email,
                                      senha: $scope.newUser.senha
@@ -40,6 +41,7 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
                         loginService.login(login).then(function (response){ 
                             loginService.saveData(response.data);                        
                             $rootScope.$broadcast('setLogado');    
+                            window.location.href = 'http://hospitaliza.cleitonlima.com.br/#!/usuario/'+response.data.id_usuario;	
                             
                         });
                           
@@ -83,17 +85,21 @@ hospitaliza.controller('usuarioController', function($scope,usuarioService,$rout
     
   
   $scope.desativarUsuario = function (){
+      var desativarConta = {
+                            motivo : $scope.motivoDesativacao,
+                            id_usuario : loginService.getIdUsuario()
+      }
       
-      usuarioService.getDesativarUsuario(loginService.getIdUsuario()).then(function (response){ 
+      usuarioService.getDesativarUsuario(desativarConta).then(function (response){ 
           
           if(response.data.status==1){
-              $scope.atualizaStatus = 'warning';
-              $scope.msgAtualizaCadastro = 'Cadastro desativado com sucesso, você será rederecionado para a página principal';
-               $location.path('#!/');	
+              $scope.StatusDesativa = 'warning';
+              $scope.msgDesativaCadastro = 'Cadastro desativado com sucesso, você será rederecionado para a página principal';              
                loginService.finalizar(loginService.getPassUser())               
                window.location.href = 'http://hospitaliza.cleitonlima.com.br/'	
                $rootScope.$broadcast('setUnlogedAvaliacao');
                $rootScope.$broadcast('setUnlogedNav');
+               $location.path('#!/');	
            }
            else{
               $scope.msgAtualizaCadastro = 'Erro ao desativar cadastro, tente mais tarde';
