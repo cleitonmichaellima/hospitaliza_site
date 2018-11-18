@@ -1,20 +1,20 @@
 hospitaliza.factory('usuarioService', function($http) {
-    
-    var url = "http://cleitonlima.com.br/slim/usuario.php/usuario/"
-    
+
+    var url = "http://hospitaliza.herokuapp.com/slim/usuario.php/usuario/"
+
     var _getDadosUsuario = function (id){
 
-        return request = $http.get('http://cleitonlima.com.br/slim/usuario.php/usuario/'+id);
+        return request = $http.get('http://hospitaliza.herokuapp.com/slim/usuario.php/usuario/'+id);
     }
-    
+
     var _getAvaliacaoUsuario = function (id){
 
-        return request = $http.get('http://cleitonlima.com.br/slim/usuario.php/avaliacaoUsuario/'+id);
+        return request = $http.get('http://hospitaliza.herokuapp.com/slim/usuario.php/avaliacaoUsuario/'+id);
     }
-    
+
     var _getVerificarSeEmailJaCadastrado = function (email){
 
-        return request = $http.get('http://cleitonlima.com.br/slim/usuario.php/usuarioVerificaEmail/'+email);
+        return request = $http.get('http://hospitaliza.herokuapp.com/slim/usuario.php/usuarioVerificaEmail/'+email);
     }
 
     var _getInsereUsuario = function(newUser){
@@ -26,71 +26,71 @@ hospitaliza.factory('usuarioService', function($http) {
                                         senha:newUser.senha,
                                         assinou_termo:newUser.termosDeUso
                                       }
-                               
+
                             });
     }
-    
+
     var _getDesativarUsuario =  function (desativar){
         return request = $http({
                                 method: "post",
-                                url: "http://cleitonlima.com.br/slim/usuario.php/desativarUsuario/",
-                                data: { 
+                                url: "http://hospitaliza.herokuapp.com/slim/usuario.php/desativarUsuario/",
+                                data: {
                                         id_usuario : desativar.id_usuario,
                                         motivo : desativar.motivo
-                                      }                               
+                                      }
                             });
     }
-    
+
     var _getAtualizarDadosUsuario = function(user){
         return request = $http({
                                 method: "post",
                                 url: url,
-                                data: { 
+                                data: {
                                         nome:user.nome,
                                         id_usuario: user.id_usuario,
                                         sexo:user.sexo,
                                         data_nascimento: user.data_nascimento,
                                         telefone:user.telefone,
-                                        dddtelefone:user.dddtelefone                                   
-                                        
-                                      }                              
+                                        dddtelefone:user.dddtelefone
+
+                                      }
                             });
     }
-    
+
     var _getlembrarSenha = function(email){
         return request = $http({
                                 method: "post",
-                                url: "http://cleitonlima.com.br/slim/usuario.php/lembrarSenha/",
-                                data: { 
-                                        email: email                               
-                                        
-                                      }                              
+                                url: "http://hospitaliza.herokuapp.com/slim/usuario.php/lembrarSenha/",
+                                data: {
+                                        email: email
+
+                                      }
                             });
     }
-        
+
     var _getVerificaChaveSenha = function (chave_unica){
           return request = $http({
                                 method: "post",
-                                url: "http://cleitonlima.com.br/slim/usuario.php/verificaChaveSenha/",
-                                data: { 
-                                        chave_unica: chave_unica                               
-                                        
-                                      }                              
+                                url: "http://hospitaliza.herokuapp.com/slim/usuario.php/verificaChaveSenha/",
+                                data: {
+                                        chave_unica: chave_unica
+
+                                      }
                             });
     }
-    
+
      var _getAtualizaSenhaUsuario = function (alterarSenha){
           return request = $http({
                                 method: "post",
-                                url: "http://cleitonlima.com.br/slim/usuario.php/alterarSenhaDoLembrar/",
-                                data: { 
+                                url: "http://hospitaliza.herokuapp.com/slim/usuario.php/alterarSenhaDoLembrar/",
+                                data: {
                                         senha: alterarSenha.senha,
                                         id_usuario : alterarSenha.id_usuario
-                                        
-                                      }                              
+
+                                      }
                             });
     }
-    
+
 
     return {
         getInsereUsuario : _getInsereUsuario,
